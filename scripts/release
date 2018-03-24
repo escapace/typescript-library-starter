@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#
+# vim: set ft=sh:
+#
+# @description release script
+# @import github.com/escapace/stack-tools/release/npmCommit
+
+main ()
+{
+    verbose true
+    strict true
+
+    _ npmCommit "${1}" "$2"
+}
