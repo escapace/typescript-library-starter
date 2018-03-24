@@ -1,0 +1,6 @@
+[submodule "src/types"]
+	path = src/types
+	url = https://github.com/escapace/types.git
+[submodule "vendor/manage"]
+	path = vendor/manage
+	url = https://github.com/escapace/manage.git
