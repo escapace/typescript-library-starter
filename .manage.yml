@@ -4,7 +4,9 @@ directories:
 
 # Environment variables
 env:
-  HELLO: "Hello World!"
+  GIT_USER_NAME: "escapace"
+  GIT_USER_EMAIL: "security@escapace.com"
+  GIT_USER_SIGNINGKEY: "0xF29CCEBC83FD4525"
 
 # Enable manage repository scripts
 enable:

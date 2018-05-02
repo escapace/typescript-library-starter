@@ -1,42 +1,41 @@
 before_install:
 - npm install -g npm
-- npm install -g greenkeeper-lockfile@1
+- npm install -g recce
 install: npm install
-before_script: greenkeeper-lockfile-update
 script:
 - gpg --keyserver ha.pool.sks-keyservers.net --recv-key 13F26F82E955B8B8CE469054F29CCEBC83FD4525
 - "./manage ci"
-after_script: greenkeeper-lockfile-upload
 after_success:
-  - npm run report-coverage
+- npm run report-coverage
 language: node_js
 env:
-  - NPM_PUBLISH_BRANCHES="master next"
+  global:
+    - NPM_PUBLISH_BRANCHES="master next"
 branches:
   only:
-    - master
-    - next
-    - /^greenkeeper/.*$/
-    - /^new-.*$/
-    - /^feat-.*$/
-    - /^add-.*$/
-    - /^change-.*$/
-    - /^breaking-.*$/
-    - /^deprecate-.*$/
-    - /^remove-.*$/
-    - /^fix-.*$/
-    - /^sec-.*$/
-    - /^security-.*$/
-    - /^perf-.*$/
-    - /^performance-.*$/
-    - /^test-.*$/
-    - /^tests-.*$/
-    - /^v?\d+\.\d+\.\d+$/
-    - /^\d+\.\d+\.\d+$/
+  - master
+  - next
+  - "/^renovate/.*$/"
+  - "/^new-.*$/"
+  - "/^feat-.*$/"
+  - "/^add-.*$/"
+  - "/^change-.*$/"
+  - "/^breaking-.*$/"
+  - "/^deprecate-.*$/"
+  - "/^remove-.*$/"
+  - "/^fix-.*$/"
+  - "/^sec-.*$/"
+  - "/^security-.*$/"
+  - "/^perf-.*$/"
+  - "/^performance-.*$/"
+  - "/^test-.*$/"
+  - "/^tests-.*$/"
+  - "/^v?\\d+\\.\\d+\\.\\d+$/"
+  - "/^\\d+\\.\\d+\\.\\d+$/"
 cache:
   directories:
-    - "$HOME/.npm"
+  - "$HOME/.npm"
 notifications:
   email: false
 node_js:
-  - node
+- node

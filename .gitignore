@@ -1,11 +1,12 @@
 .DS_Store
 .awcache
 .idea
+.manage_modules
 .rpt2_cache
 .vscode
 compiled
-dist
 docs
+lib
 
 # Editor directories and files
 .idea

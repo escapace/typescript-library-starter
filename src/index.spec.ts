@@ -5,7 +5,12 @@ import 'mocha'
 import { assert } from 'chai'
 
 describe('...', () => {
-  it('hello', () => {
-    assert.equal(hello('World'), 'Hello World')
+  it('hello', done => {
+    hello('World')
+      .then(result => {
+        assert.equal(result, 'Hello World')
+        done()
+      })
+      .catch(done)
   })
 })

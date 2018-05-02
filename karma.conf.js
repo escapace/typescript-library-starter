@@ -1,13 +1,10 @@
-/* tslint:disable no-var-requires */
-import puppeteer from 'puppeteer'
-
-import { camelCase } from 'lodash'
+const puppeteer = require('puppeteer')
+const { camelCase } = require('lodash')
+const { name } = require('./package.json')
 
 process.env.CHROME_BIN = puppeteer.executablePath()
 
-const pkg = require('./package.json')
-
-export default config => {
+module.exports = config => {
   config.set({
     mime: {
       'text/x-typescript': ['ts']
@@ -17,7 +14,10 @@ export default config => {
     },
     plugins: ['karma-chrome-launcher', 'karma-mocha', 'karma-sauce-launcher', 'karma-typescript'],
     frameworks: ['mocha', 'karma-typescript'],
-    files: ['src/**/*.ts'],
+    files: [
+      'node_modules/@babel/polyfill/dist/polyfill.js',
+      'src/**/*.ts'
+    ],
     preprocessors: {
       'src/**/*.ts': 'karma-typescript'
     },
@@ -90,8 +90,8 @@ export default config => {
       browserDisconnectTimeout: 15 * 1000,
       browserDisconnectTolerance: 3,
       sauceLabs: {
-        testName: `${pkg.name} karma test`,
-        tunnelIdentifier: process.env.TRAVIS ? process.env.TRAVIS_JOB_NUMBER : camelCase(pkg.name)
+        testName: `${name} karma test`,
+        tunnelIdentifier: process.env.TRAVIS ? process.env.TRAVIS_JOB_NUMBER : camelCase(name)
       },
       customLaunchers: customLaunchers,
       browsers: Object.keys(customLaunchers),
