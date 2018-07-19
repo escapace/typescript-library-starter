@@ -89,7 +89,7 @@
     "tslint-config-escapace": "1.2.0",
     "tslint-config-prettier": "1.13.0",
     "tslint-config-standard": "7.1.0",
-    "tslint-microsoft-contrib": "5.0.3",
+    "tslint-microsoft-contrib": "5.1.0",
     "typescript": "2.9.2",
     "validate-commit": "3.4.0"
   },
