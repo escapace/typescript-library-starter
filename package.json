@@ -93,5 +93,7 @@
     "typescript": "2.9.2",
     "validate-commit": "3.4.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "tslib": "^1.9.3"
+  }
 }
