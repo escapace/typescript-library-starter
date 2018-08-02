@@ -36,15 +36,12 @@
   "lint-staged": {
     "{src,test}/**/*.ts": [
       "tslint --exclude 'src/types/**/*.ts' --project tsconfig.json --fix",
-      "prettier --write --parser typescript --trailing-comma none --no-semi --single-quote",
+      "prettier --write",
       "git add"
     ],
-    "{src,test}/**/*.js": [
-      "prettier --write --trailing-comma none --no-semi --single-quote",
-      "git add"
-    ],
-    "**/*.json": ["prettier --write --parser json", "git add"],
-    "**/*.md": ["prettier --parser markdown --print-width 80", "git add"]
+    "{src,test}/**/*.js": ["prettier --write", "git add"],
+    "**/*.json": ["prettier --write", "git add"],
+    "**/*.md": ["prettier --write", "git add"]
   },
   "husky": {
     "hooks": {

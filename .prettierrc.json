@@ -1,0 +1,35 @@
+{
+  "overrides": [
+    {
+      "files": "*.js",
+      "options": {
+        "semi": false,
+        "parser": "babylon",
+        "singleQuote": true,
+        "trailingComma": "none"
+      }
+    },
+    {
+      "files": "*.ts",
+      "options": {
+        "semi": false,
+        "parser": "typescript",
+        "singleQuote": true,
+        "trailingComma": "none"
+      }
+    },
+    {
+      "files": "*.md",
+      "options": {
+        "parser": "markdown",
+        "printWidth": 80
+      }
+    },
+    {
+      "files": "*.json",
+      "options": {
+        "parser": "json"
+      }
+    }
+  ]
+}
