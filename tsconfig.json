@@ -13,7 +13,7 @@
     "module": "esnext",
     "noImplicitAny": true,
     "noImplicitThis": true,
-    "noUnusedLocals": false,
+    "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "./lib",
     "paths": {
