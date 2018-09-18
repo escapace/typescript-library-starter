@@ -12,16 +12,18 @@ module.exports = config => {
     client: {
       captureConsole: false
     },
-    plugins: ['karma-chrome-launcher', 'karma-mocha', 'karma-sauce-launcher', 'karma-typescript'],
-    frameworks: ['mocha', 'karma-typescript'],
-    files: [
-      'node_modules/@babel/polyfill/dist/polyfill.js',
-      'src/**/*.ts'
+    plugins: [
+      'karma-chrome-launcher',
+      'karma-mocha',
+      'karma-sauce-launcher',
+      'karma-typescript'
     ],
+    frameworks: ['mocha', 'karma-typescript'],
+    files: ['node_modules/@babel/polyfill/dist/polyfill.js', 'src/**/*.ts'],
     preprocessors: {
       'src/**/*.ts': 'karma-typescript'
     },
-    exclude: ["src/types/**/*.d.ts"],
+    exclude: ['src/types/**/*.d.ts'],
     reporters: ['dots', 'karma-typescript'],
     browsers: ['puppeteer'],
     customLaunchers: {
@@ -56,7 +58,6 @@ module.exports = config => {
       },
       sl_safari: {
         base: 'SauceLabs',
-        platformName: "iOS",
         browserName: 'Safari'
       },
       sl_edge: {
@@ -74,7 +75,9 @@ module.exports = config => {
       browserDisconnectTolerance: 3,
       sauceLabs: {
         testName: `${name} karma test`,
-        tunnelIdentifier: process.env.TRAVIS ? process.env.TRAVIS_JOB_NUMBER : camelCase(name)
+        tunnelIdentifier: process.env.TRAVIS
+          ? process.env.TRAVIS_JOB_NUMBER
+          : camelCase(name)
       },
       customLaunchers: customLaunchers,
       browsers: Object.keys(customLaunchers),
