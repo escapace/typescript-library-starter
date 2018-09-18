@@ -21,6 +21,7 @@ module.exports = config => {
     preprocessors: {
       'src/**/*.ts': 'karma-typescript'
     },
+    exclude: ["src/types/**/*.d.ts"],
     reporters: ['dots', 'karma-typescript'],
     browsers: ['puppeteer'],
     customLaunchers: {
