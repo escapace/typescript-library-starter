@@ -47,39 +47,21 @@ module.exports = config => {
     const customLaunchers = {
       sl_firefox: {
         base: 'SauceLabs',
-        browserName: 'Firefox',
-        version: '55'
+        browserName: 'Firefox'
       },
       sl_chrome: {
         base: 'SauceLabs',
         browserName: 'Chrome',
-        version: '61'
+        version: 'beta'
       },
       sl_safari: {
         base: 'SauceLabs',
-        browserName: 'Safari',
-        version: '10'
+        platformName: "iOS",
+        browserName: 'Safari'
       },
       sl_edge: {
         base: 'SauceLabs',
-        browserName: 'MicrosoftEdge',
-        version: '15'
-      },
-      // sl_ios: {
-      //   base: 'SauceLabs',
-      //   deviceName: "iPad (5th generation) Simulator",
-      //   deviceOrientation: "portrait",
-      //   platformVersion: "11.0",
-      //   platformName: "iOS",
-      //   browserName: "Safari"
-      // },
-      sl_android: {
-        base: 'SauceLabs',
-        deviceName: 'Android Emulator',
-        deviceOrientation: 'portrait',
-        browserName: 'Chrome',
-        platformVersion: '6.0',
-        platformName: 'Android'
+        browserName: 'MicrosoftEdge'
       }
     }
 
