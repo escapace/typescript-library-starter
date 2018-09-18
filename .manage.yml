@@ -11,6 +11,7 @@ env:
 # Enable manage repository scripts
 enable:
   - help
+  - trust-escapace
 
 # Default script
 default: help
