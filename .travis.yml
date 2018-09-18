@@ -3,8 +3,8 @@ before_install:
 - npm install -g recce
 install: npm install
 script:
-- gpg --keyserver ha.pool.sks-keyservers.net --recv-key 13F26F82E955B8B8CE469054F29CCEBC83FD4525
-- "./manage ci"
+- ./manage trust-escapace
+- ./manage ci
 after_success:
 - npm run report-coverage
 language: node_js
