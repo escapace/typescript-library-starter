@@ -21,13 +21,13 @@
     "node": ">=9.0.0"
   },
   "scripts": {
-    "lint": "tslint --exclude 'src/types/**/*.ts' --project tsconfig.json -t codeFrame 'src/**/*.ts'",
+    "lint": "tslint --exclude 'src/types/**/*.ts' --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
     "build": "recce build -e src/index.ts",
     "test:travis": "npm run lint && npm run test",
     "test": "npm run test:node && npm run test:browser",
     "report-coverage": "npm run test:coverage && nyc report --reporter=text-lcov > coverage.lcov && codecov ; rimraf coverage.lcov",
     "test:browser": "karma start --single-run",
-    "test:node": "cross-env TS_NODE_PROJECT=tsconfig-node.json mocha --opts .mocha.opts 'src/**/*.spec.ts'",
+    "test:node": "cross-env TS_NODE_PROJECT=tsconfig-node.json mocha --opts .mocha.opts 'src/**/*.spec.ts' 'test/**/*.ts'",
     "test:coverage": "nyc npm run test:node"
   },
   "lint-staged": {
@@ -50,7 +50,7 @@
     "tempDirectory": "./node_modules/.cache/nyc_output",
     "include": ["src/**/*.ts"],
     "extension": [".ts", ".tsx"],
-    "exclude": ["src/**/*.spec.ts"],
+    "exclude": ["src/**/*.spec.ts", "test/**/*.ts"],
     "reporter": ["text"]
   },
   "devDependencies": {

@@ -19,9 +19,10 @@ module.exports = config => {
       'karma-typescript'
     ],
     frameworks: ['mocha', 'karma-typescript'],
-    files: ['node_modules/@babel/polyfill/dist/polyfill.js', 'src/**/*.ts'],
+    files: ['node_modules/@babel/polyfill/dist/polyfill.js', 'src/**/*.ts', 'test/**/*.ts'],
     preprocessors: {
-      'src/**/*.ts': 'karma-typescript'
+      'src/**/*.ts': 'karma-typescript',
+      'test/**/*.ts': 'karma-typescript'
     },
     exclude: ['src/types/**/*.d.ts'],
     reporters: ['dots', 'karma-typescript'],
