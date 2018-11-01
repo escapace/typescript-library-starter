@@ -1,7 +1,3 @@
-directories:
-  script: scripts
-  module: scripts/modules
-
 # Environment variables
 env:
   GIT_USER_NAME: "escapace"
