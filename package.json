@@ -2,13 +2,17 @@
   "name": "typescript-library-starter",
   "version": "0.0.0",
   "description": "",
-  "keywords": ["TypeScript"],
+  "keywords": [
+    "TypeScript"
+  ],
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "browser": "lib/umd/index.js",
   "typings": "lib/types/index.d.ts",
   "sideEffects": false,
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "bugs": "https://github.com/escapace/typescript-library-starter/issues",
   "author": "escapace <opensource@escapace.com>",
   "license": "MPL-2.0",
@@ -36,23 +40,38 @@
       "prettier --write",
       "git add"
     ],
-    "{src,test}/**/*.js": ["prettier --write", "git add"]
+    "{src,test}/**/*.js": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "husky": {
     "hooks": {
-      "commit-msg": "validate-commit-msg",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged"
     }
   },
   "nyc": {
     "tempDirectory": "./node_modules/.cache/nyc_output",
-    "include": ["src/**/*.ts"],
-    "extension": [".ts", ".tsx"],
-    "exclude": ["src/**/*.spec.ts", "test/**/*.ts"],
-    "reporter": ["text"]
+    "include": [
+      "src/**/*.ts"
+    ],
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "exclude": [
+      "src/**/*.spec.ts",
+      "test/**/*.ts"
+    ],
+    "reporter": [
+      "text"
+    ]
   },
   "devDependencies": {
     "@babel/polyfill": "7.0.0",
+    "@commitlint/cli": "^7.2.1",
+    "@commitlint/config-conventional": "^7.1.2",
     "@types/chai": "4.1.7",
     "@types/mocha": "5.2.5",
     "@types/node": "10.12.10",
@@ -79,7 +98,6 @@
     "tslint-config-standard": "8.0.1",
     "tslint-microsoft-contrib": "5.2.1",
     "typescript": "3.1.6",
-    "validate-commit": "3.4.0"
   },
   "dependencies": {
     "tslib": "^1.9.3"
