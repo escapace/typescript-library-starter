@@ -8,9 +8,6 @@ script:
 after_success:
 - npm run report-coverage
 language: node_js
-env:
-  global:
-  - NPM_PUBLISH_BRANCHES="master next"
 branches:
   only:
   - master
