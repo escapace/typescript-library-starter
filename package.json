@@ -87,7 +87,7 @@
     "lodash": "4.17.11",
     "mocha": "5.2.0",
     "nyc": "13.1.0",
-    "prettier": "1.15.3",
+    "prettier": "1.16.1",
     "puppeteer": "1.11.0",
     "rimraf": "2.6.3",
     "source-map-support": "0.5.10",
