@@ -1,7 +1,6 @@
 import { hello } from './index'
 
 // tslint:disable-next-line no-import-side-effect
-import 'mocha'
 import { assert } from 'chai'
 
 describe('./src/index.spec.ts', () => {
