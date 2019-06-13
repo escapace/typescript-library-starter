@@ -4,7 +4,6 @@ addons:
     packages:
     - dirmngr
 before_install:
-- git config --global gpg.program gpg2
 - npm install -g npm recce
 install: npm install
 script:
