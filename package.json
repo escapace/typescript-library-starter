@@ -1,56 +1,74 @@
 {
   "name": "typescript-library-starter",
-  "version": "0.0.0",
   "description": "",
-  "keywords": [
-    "TypeScript"
-  ],
-  "main": "lib/cjs/index.js",
-  "module": "lib/esm/index.js",
+  "version": "0.0.0",
+  "author": "escapace <opensource@escapace.com>",
   "browser": "lib/umd/index.js",
-  "typings": "lib/types/index.d.ts",
-  "sideEffects": false,
+  "bugs": "https://github.com/escapace/typescript-library-starter/issues",
+  "dependencies": {
+    "tslib": "^1.9.3"
+  },
+  "devDependencies": {
+    "@babel/polyfill": "7.4.4",
+    "@commitlint/cli": "8.0.0",
+    "@commitlint/config-conventional": "8.0.0",
+    "@types/chai": "4.1.7",
+    "@types/mocha": "5.2.6",
+    "@types/node": "12.0.2",
+    "chai": "4.2.0",
+    "codecov": "3.5.0",
+    "cross-env": "5.2.0",
+    "husky": "2.3.0",
+    "lint-staged": "8.1.7",
+    "lodash": "4.17.11",
+    "mocha": "6.1.4",
+    "nyc": "14.1.1",
+    "prettier": "1.17.1",
+    "rimraf": "2.6.3",
+    "source-map-support": "0.5.12",
+    "syncpack": "4.5.2",
+    "ts-node": "8.1.0",
+    "tslint": "5.16.0",
+    "tslint-config-escapace": "1.5.0",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-config-standard": "8.0.1",
+    "tslint-microsoft-contrib": "6.1.1",
+    "typescript": "3.4.5"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "files": [
     "lib"
   ],
-  "bugs": "https://github.com/escapace/typescript-library-starter/issues",
-  "author": "escapace <opensource@escapace.com>",
-  "license": "MPL-2.0",
   "homepage": "https://github.com/escapace/typescript-library-starter",
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "engines": {
-    "node": ">=9.0.0"
-  },
-  "scripts": {
-    "lint": "tslint --exclude 'src/types/**/*.ts' --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
-    "build": "recce build -e src/index.ts",
-    "test:travis": "npm run lint && npm run test",
-    "test": "npm run test:node && npm run test:browser",
-    "report-coverage": "npm run test:coverage && nyc report --reporter=text-lcov > coverage.lcov && codecov ; rimraf coverage.lcov",
-    "test:browser": "karma start --single-run",
-    "test:node": "cross-env TS_NODE_PROJECT=tsconfig-node.json mocha --opts .mocha.opts 'src/**/*.spec.ts' 'test/**/*.ts'",
-    "test:coverage": "nyc npm run test:node"
-  },
-  "lint-staged": {
-    "{src,test}/**/*.ts": [
-      "tslint --exclude 'src/types/**/*.ts' --project tsconfig.json --fix",
-      "prettier --write",
-      "git add"
-    ],
-    "{src,test}/**/*.js": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged"
     }
   },
+  "keywords": [
+    "TypeScript"
+  ],
+  "license": "MPL-2.0",
+  "lint-staged": {
+    "package.json": [
+      "syncpack-format --source",
+      "syncpack-set-semver-ranges --dev --source"
+    ],
+    "{src,examples,perf}/**/*.ts": [
+      "tslint --exclude 'src/types/**/*.ts' --project tsconfig.json --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "{src,examples,perf}/**/*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
   "nyc": {
     "tempDirectory": "./node_modules/.cache/nyc_output",
     "include": [
@@ -68,38 +86,16 @@
       "text"
     ]
   },
-  "devDependencies": {
-    "@babel/polyfill": "7.4.4",
-    "@commitlint/cli": "8.0.0",
-    "@commitlint/config-conventional": "8.0.0",
-    "@types/chai": "4.1.7",
-    "@types/mocha": "5.2.6",
-    "@types/node": "12.0.2",
-    "chai": "4.2.0",
-    "codecov": "3.5.0",
-    "cross-env": "5.2.0",
-    "husky": "2.3.0",
-    "karma": "4.1.0",
-    "karma-chrome-launcher": "2.2.0",
-    "karma-mocha": "1.3.0",
-    "karma-typescript": "4.0.0",
-    "lint-staged": "8.1.7",
-    "lodash": "4.17.11",
-    "mocha": "6.1.4",
-    "nyc": "14.1.1",
-    "prettier": "1.17.1",
-    "puppeteer": "1.16.0",
-    "rimraf": "2.6.3",
-    "source-map-support": "0.5.12",
-    "ts-node": "8.1.0",
-    "tslint": "5.16.0",
-    "tslint-config-escapace": "1.5.0",
-    "tslint-config-prettier": "1.18.0",
-    "tslint-config-standard": "8.0.1",
-    "tslint-microsoft-contrib": "6.1.1",
-    "typescript": "3.4.5"
+  "repository": "escapace/typescript-library-starter",
+  "scripts": {
+    "build": "recce build -e src/index.ts",
+    "lint": "tslint --exclude 'src/types/**/*.ts' --project tsconfig.json -t codeFrame 'src/**/*.ts'",
+    "report-coverage": "npm run test:coverage && nyc report --reporter=text-lcov > coverage.lcov && codecov ; rimraf coverage.lcov",
+    "test": "npm run test:node && npm run test:browser",
+    "test:coverage": "nyc npm run test:node",
+    "test:node": "cross-env TS_NODE_PROJECT=tsconfig-node.json mocha --opts .mocha.opts 'src/**/*.spec.ts'",
+    "test:travis": "npm run lint && npm run test"
   },
-  "dependencies": {
-    "tslib": "^1.9.3"
-  }
+  "sideEffects": false,
+  "typings": "lib/types/index.d.ts"
 }
