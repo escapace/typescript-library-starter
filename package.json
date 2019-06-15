@@ -1,7 +1,7 @@
 {
   "name": "@escapace/typescript-library-starter",
   "description": "",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "author": "escapace <opensource@escapace.com>",
   "browser": "lib/umd/index.js",
   "bugs": "https://github.com/escapace/typescript-library-starter/issues",
