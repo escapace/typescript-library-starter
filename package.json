@@ -1,5 +1,6 @@
 {
   "name": "@escapace/typescript-library-starter",
+  "private": false,
   "description": "",
   "version": "1.0.0",
   "author": "escapace <opensource@escapace.com>",
