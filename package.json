@@ -1,7 +1,7 @@
 {
-  "name": "typescript-library-starter",
+  "name": "@escapace/typescript-library-starter",
   "description": "",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "escapace <opensource@escapace.com>",
   "browser": "lib/umd/index.js",
   "bugs": "https://github.com/escapace/typescript-library-starter/issues",
@@ -9,7 +9,7 @@
     "tslib": "^1.9.3"
   },
   "devDependencies": {
-    "@babel/polyfill": "^7.4.4",
+    "@babel/polyfill": "7.4.4",
     "@commitlint/cli": "8.0.0",
     "@commitlint/config-conventional": "8.0.0",
     "@types/chai": "4.1.7",
@@ -24,6 +24,7 @@
     "nyc": "14.1.1",
     "prettier": "1.17.1",
     "rimraf": "2.6.3",
+    "semantic-release": "^15.13.16",
     "source-map-support": "0.5.12",
     "syncpack": "4.5.2",
     "ts-node": "8.1.0",
@@ -85,19 +86,16 @@
       "text"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/escapace/typescript-library-starter"
-  },
+  "repository": "escapace/typescript-library-starter",
   "scripts": {
-    "typecheck": "tsc --noEmit",
     "build": "recce build -e src/index.ts",
     "lint": "tslint --exclude 'src/types/**/*.ts' --project tsconfig.json -t codeFrame 'src/**/*.ts'",
     "report-coverage": "npm run test:coverage && nyc report --reporter=text-lcov > coverage.lcov && codecov ; rimraf coverage.lcov",
     "test": "npm run test:node",
     "test:coverage": "nyc npm run test:node",
     "test:node": "cross-env TS_NODE_PROJECT=tsconfig-node.json mocha --opts .mocha.opts 'src/**/*.spec.ts'",
-    "test:travis": "npm run lint && npm run test"
+    "test:travis": "npm run lint && npm run test",
+    "typecheck": "tsc --noEmit"
   },
   "sideEffects": false,
   "typings": "lib/types/index.d.ts"

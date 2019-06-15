@@ -44,3 +44,19 @@ notifications:
   email: false
 node_js:
 - node
+jobs:
+  include:
+    # Define the release stage that runs semantic-release
+    - stage: release
+      node_js: lts/*
+      # Advanced: optionally overwrite your default `script` step to skip the tests
+      # script: skip
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          - npx semantic-release
+env:
+  global:
+  - secure: s5S9H2r9ASE+zolYcpqlxNumfmIFoSIL2JgHAWRIlYaz4+9Ffv0nlkO6sgt6beruTNGSZxSePooQwg00gsmYCLOqTkI7Iv3iUnFv1CvDKCJpgCWjplsNQSIF9XhJCSNOxiAdbZ3wrKQvVcXEZ2Yf3It48Hls5BmXe2jhxJ8juB1jlTA8yGBmD5DsrFcC4cI+9QSB1Vm9pNaNXiiSzn1Xn4uuiaMiJnMykWTFLUuOrGcleaSatvYJU1N9UP0HKALwTQQ88p+peNrEf20TnWH6eHT1vb3HNXlawQY0IbDEJ595kKlJwZlUNXJdGqw7UXhswkgXhgObmk12O7YQO8C5zh3R2Cij38Md9IZhQmrEvIDukGo90BMPHP97mkhi0xHZG3TjWPDHK+aGPVPeOTtj0b08prVXqYNRLZmf07TU8KIrNu5HUJJy6KXgEcfMgWLVxh4PaZwH1JEf9YwajOv99fn8+6bBgkWuCJQke7f/NWIynVmd7+y8IrT2LDes4jL6K0V9TRlm8ngXrSO8nl7gEN2Z74BGMW/wDcTmRNZ1s5vPRf8uJ8cU6G5+YgWTdkGb+SsOSppIHwpgj6B+swwuQTHzYLF1Iwm3nItKGNE3Fh/+u9UsVSywmBk5bJvP3KqDZSpLqMJIIypzN8HNxp1noucZ5ZevLMGzoC6zrZPBs/s=
+  - secure: 5jK/lwTCsCtGcrbBMxGH61m5gTN5OCNxSedoEYrd/1IZ/Hng+TNXrgNTSXlJWb/yD5ekLrgFKGur0f4PkHDg97YHv8rlDyzLYv3SlAhPL8Exkc9OqPSjfbym1uPOyi/d/cLX25uX8YEmKjdJC3il6PS9Ve7P3UmdAAT22T3IeVSmUUzJz9VmgXBzLV0D0iru96ms/eITRo1nmJPESzN1ngAhM4C3BkkEke7wjFfX/azhQfZGJRXEdvCqOtqGqwOyyQ3tnKbsxeXrJoDhYJkxU3MW6ZbGCxGbTtMLWynb4TTR3Nt0hUs8Tf9nYoSTqiC2qMzRg8Sz7D5MPjtsOgoOQayQmcgrth5UqeeEjKcymzpFR9KOP1l5w5D/lanQZ1TT5gb2Jj0u09996JIfsJT1IA8lPvhZpwteaHm2ZXgqVWZvqKEcVExDnH8v428uyzv8Ly/JAwCTOI2FQ7glFDcC7shQeRfXqJoEBq7fG876XycYaLkXfsU5WwUZczbUd7qWXyrAaCznX4pjXWFlqFreQ9xXczkBvLXOGvjrnZyWCMK03ywLVNAE6ASiXeg8TP08w71LjHHXW0x+DD/DZuPIPxyt5dFDaA5APIJGAmMbZlXQqndHUgPy4hpcR7ssDMz0l5r3unFzK5VoPXW6Lbyr9U5YrtG5VEQowVtvj160VIY=
