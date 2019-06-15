@@ -8,7 +8,7 @@ before_install:
 install: npm install
 script:
 - "./manage trust-escapace"
-- "./manage ci"
+- npm run test:travis
 after_success:
 - npm run report-coverage
 language: node_js
