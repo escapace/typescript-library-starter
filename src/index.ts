@@ -1,3 +1,4 @@
-export const hello = async (name: string): Promise<string> => Promise.resolve(`Hello ${name}`)
+export const hello = async (name: string | number): Promise<string> =>
+  Promise.resolve(`Hello ${name}`)
 
 export default hello
