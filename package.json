@@ -9,7 +9,7 @@
     "tslib": "^1.9.3"
   },
   "devDependencies": {
-    "@babel/polyfill": "7.4.4",
+    "@babel/polyfill": "^7.4.4",
     "@commitlint/cli": "8.0.0",
     "@commitlint/config-conventional": "8.0.0",
     "@types/chai": "4.1.7",
@@ -20,7 +20,6 @@
     "cross-env": "5.2.0",
     "husky": "2.3.0",
     "lint-staged": "8.1.7",
-    "lodash": "4.17.11",
     "mocha": "6.1.4",
     "nyc": "14.1.1",
     "prettier": "1.17.1",
@@ -45,7 +44,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && npm run typecheck && npm run test"
     }
   },
   "keywords": [
@@ -86,12 +85,16 @@
       "text"
     ]
   },
-  "repository": "escapace/typescript-library-starter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/escapace/typescript-library-starter"
+  },
   "scripts": {
+    "typecheck": "tsc --noEmit",
     "build": "recce build -e src/index.ts",
     "lint": "tslint --exclude 'src/types/**/*.ts' --project tsconfig.json -t codeFrame 'src/**/*.ts'",
     "report-coverage": "npm run test:coverage && nyc report --reporter=text-lcov > coverage.lcov && codecov ; rimraf coverage.lcov",
-    "test": "npm run test:node && npm run test:browser",
+    "test": "npm run test:node",
     "test:coverage": "nyc npm run test:node",
     "test:node": "cross-env TS_NODE_PROJECT=tsconfig-node.json mocha --opts .mocha.opts 'src/**/*.spec.ts'",
     "test:travis": "npm run lint && npm run test"
