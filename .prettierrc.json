@@ -3,8 +3,9 @@
     {
       "files": "*.js",
       "options": {
-        "semi": false,
         "parser": "babylon",
+        "printWidth": 80,
+        "semi": false,
         "singleQuote": true,
         "trailingComma": "none"
       }
@@ -12,8 +13,9 @@
     {
       "files": "*.ts",
       "options": {
-        "semi": false,
         "parser": "typescript",
+        "printWidth": 80,
+        "semi": false,
         "singleQuote": true,
         "trailingComma": "none"
       }
