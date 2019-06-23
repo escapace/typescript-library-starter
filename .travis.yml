@@ -5,6 +5,15 @@ addons:
     - dirmngr
 before_install:
 - npm install -g npm recce
+install: npm install
+script:
+- "./manage trust-escapace"
+- npm run typecheck
+- npm run lint
+- npm run test
+- npm run build
+after_success:
+- npx codecov
 language: node_js
 branches:
   only:
@@ -38,23 +47,8 @@ notifications:
   email: false
 node_js:
 - node
-stages:
-  - test
-  - build
-  - deploy
 jobs:
   include:
-  - stage: test
-    name: "Typecheck"
-    script: npm run typecheck
-  - script: npm run lint
-    name: "Lint"
-  - script:
-      - npm run test
-      - npx codecov
-    name: "Test"
-  - stage: build
-    script: npm run build
   - stage: release
     node_js: lts/*
     deploy:
