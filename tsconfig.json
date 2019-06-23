@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "declaration": true,
     "downlevelIteration": true,
     "esModuleInterop": true,
@@ -15,17 +14,11 @@
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outDir": "./lib",
-    "paths": {
-      "*": ["./src/types/*"]
-    },
     "preserveConstEnums": true,
     "pretty": true,
-    "rootDirs": ["./src"],
     "strict": true,
     "target": "es2017",
     "typeRoots": ["node_modules/@types"]
   },
-  "include": ["./src/**/*", "./test/**/*"],
-  "exclude": ["./src/types/**/*"]
+  "include": ["./src/**/*"]
 }
