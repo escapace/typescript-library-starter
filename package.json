@@ -9,7 +9,6 @@
     "tslib": "^1.9.3"
   },
   "devDependencies": {
-    "@babel/polyfill": "7.4.4",
     "@commitlint/cli": "8.0.0",
     "@commitlint/config-conventional": "8.0.0",
     "@types/chai": "4.1.7",
@@ -17,17 +16,11 @@
     "@types/node": "12.0.8",
     "chai": "4.2.0",
     "codecov": "3.5.0",
-    "cross-env": "5.2.0",
     "husky": "2.4.1",
     "lint-staged": "8.2.1",
-    "mocha": "6.1.4",
-    "nyc": "14.1.1",
     "prettier": "1.18.2",
-    "rimraf": "2.6.3",
     "semantic-release": "15.13.16",
-    "source-map-support": "0.5.12",
     "syncpack": "4.5.2",
-    "ts-node": "8.3.0",
     "tslint": "5.17.0",
     "tslint-config-escapace": "1.5.0",
     "tslint-config-prettier": "1.18.0",
@@ -45,7 +38,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged && npm run typecheck && npm run test:coverage"
+      "pre-commit": "lint-staged && npm run typecheck && npm run test"
     }
   },
   "keywords": [
@@ -70,40 +63,6 @@
   },
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
-  "nyc": {
-    "cache": false,
-    "check-coverage": true,
-    "branches": 80,
-    "lines": 80,
-    "functions": 80,
-    "statements": 80,
-    "tempDirectory": "./node_modules/.cache/nyc_output",
-    "include": [
-      "src/**/*.ts"
-    ],
-    "extension": [
-      ".ts",
-      ".tsx"
-    ],
-    "exclude": [
-      "**/*.d.ts",
-      "coverage/**",
-      "packages/*/test/**",
-      "test/**",
-      "test{,-*}.ts",
-      "**/*{.,-}{test,spec}.ts",
-      "**/__tests__/**",
-      "**/node_modules/**"
-    ],
-    "require": [
-      "ts-node/register"
-    ],
-    "reporter": [
-      "text"
-    ],
-    "sourceMap": true,
-    "instrument": true
-  },
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -112,11 +71,7 @@
   "scripts": {
     "build": "recce build -e src/index.ts",
     "lint": "tslint --exclude 'src/types/**/*.ts' --project tsconfig.json -t codeFrame 'src/**/*.ts'",
-    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov ; rimraf coverage.lcov",
-    "test": "npm run test:node",
-    "test:coverage": "nyc npm run test:node",
-    "test:node": "cross-env TS_NODE_PROJECT=tsconfig-node.json mocha --opts .mocha.opts 'src/**/*.spec.ts'",
-    "test:travis": "npm run typecheck && npm run lint && npm run test:coverage",
+    "test": "recce test --browser 'src/**.spec.ts' --node 'src/**.spec.ts' --reporter lcov --reporter text",
     "typecheck": "tsc --noEmit"
   },
   "sideEffects": false,
