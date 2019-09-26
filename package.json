@@ -14,18 +14,26 @@
     "@types/chai": "4.2.3",
     "@types/mocha": "5.2.7",
     "@types/node": "12.7.5",
+    "@typescript-eslint/eslint-plugin": "2.3.1",
+    "@typescript-eslint/parser": "2.3.1",
     "chai": "4.2.0",
     "codecov": "3.6.1",
+    "eslint": "6.4.0",
+    "eslint-config-escapace": "2.0.1",
+    "eslint-config-prettier": "6.3.0",
+    "eslint-config-standard-with-typescript": "9.0.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-jsdoc": "15.9.2",
+    "eslint-plugin-no-null": "1.0.2",
+    "eslint-plugin-node": "10.0.0",
+    "eslint-plugin-prettier": "3.1.1",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.1",
     "husky": "3.0.5",
     "lint-staged": "9.2.5",
     "prettier": "1.18.2",
     "semantic-release": "15.13.24",
     "syncpack": "4.5.4",
-    "tslint": "5.20.0",
-    "tslint-config-escapace": "1.6.0",
-    "tslint-config-prettier": "1.18.0",
-    "tslint-config-standard": "8.0.1",
-    "tslint-microsoft-contrib": "6.2.0",
     "typescript": "3.6.3"
   },
   "engines": {
@@ -52,11 +60,12 @@
       "git add"
     ],
     "{src,examples,perf}/**/*.ts": [
-      "tslint --exclude 'src/types/**/*.ts' --project tsconfig.json --fix",
+      "eslint --fix",
       "prettier --write",
       "git add"
     ],
     "{src,examples,perf}/**/*.js": [
+      "eslint --fix",
       "prettier --write",
       "git add"
     ]
@@ -70,7 +79,7 @@
   "repository": "escapace/typescript-library-starter",
   "scripts": {
     "build": "recce build -e src/index.ts",
-    "lint": "tslint --exclude 'src/types/**/*.ts' --project tsconfig.json -t codeFrame 'src/**/*.ts'",
+    "lint": "eslint 'src/**/*.ts'",
     "test": "recce test --browser 'src/**.spec.ts' --node 'src/**.spec.ts' --reporter lcov --reporter text",
     "typecheck": "tsc --noEmit"
   },
