@@ -21,7 +21,7 @@
     "eslint": "6.5.1",
     "eslint-config-escapace": "2.0.2",
     "eslint-config-prettier": "6.4.0",
-    "eslint-config-standard-with-typescript": "10.0.0",
+    "eslint-config-standard-with-typescript": "11.0.1",
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-jsdoc": "17.0.0",
     "eslint-plugin-no-null": "1.0.2",
