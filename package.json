@@ -11,19 +11,19 @@
   "devDependencies": {
     "@commitlint/cli": "8.2.0",
     "@commitlint/config-conventional": "8.2.0",
-    "@types/chai": "4.2.5",
+    "@types/chai": "4.2.6",
     "@types/mocha": "5.2.7",
     "@types/node": "12.12.14",
-    "@typescript-eslint/eslint-plugin": "2.9.0",
-    "@typescript-eslint/parser": "2.9.0",
+    "@typescript-eslint/eslint-plugin": "2.10.0",
+    "@typescript-eslint/parser": "2.10.0",
     "chai": "4.2.0",
     "codecov": "3.6.1",
-    "eslint": "6.7.1",
+    "eslint": "6.7.2",
     "eslint-config-escapace": "2.0.3",
     "eslint-config-prettier": "6.7.0",
     "eslint-config-standard-with-typescript": "11.0.1",
     "eslint-plugin-import": "2.18.2",
-    "eslint-plugin-jsdoc": "18.1.5",
+    "eslint-plugin-jsdoc": "18.4.3",
     "eslint-plugin-no-null": "1.0.2",
     "eslint-plugin-node": "10.0.0",
     "eslint-plugin-prettier": "3.1.1",
@@ -34,7 +34,7 @@
     "prettier": "1.19.1",
     "semantic-release": "15.13.31",
     "syncpack": "4.5.4",
-    "typescript": "3.7.2"
+    "typescript": "3.7.3"
   },
   "engines": {
     "node": ">=10.16.0"
