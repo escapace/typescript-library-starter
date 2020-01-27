@@ -6,33 +6,33 @@
   "browser": "lib/umd/index.js",
   "bugs": "https://github.com/escapace/typescript-library-starter/issues",
   "dependencies": {
-    "tslib": "^1.9.3"
+    "tslib": "^1.10.0"
   },
   "devDependencies": {
     "@commitlint/cli": "8.3.5",
     "@commitlint/config-conventional": "8.3.4",
     "@types/chai": "4.2.7",
     "@types/mocha": "5.2.7",
-    "@types/node": "12.12.17",
+    "@types/node": "13.5.0",
     "@typescript-eslint/eslint-plugin": "2.17.0",
     "@typescript-eslint/parser": "2.17.0",
     "chai": "4.2.0",
     "codecov": "3.6.2",
     "eslint": "6.8.0",
-    "eslint-config-escapace": "2.0.3",
+    "eslint-config-escapace": "3.0.0",
     "eslint-config-prettier": "6.9.0",
-    "eslint-config-standard-with-typescript": "11.0.1",
+    "eslint-config-standard-with-typescript": "12.0.1",
     "eslint-plugin-import": "2.20.0",
-    "eslint-plugin-jsdoc": "20.4.0",
+    "eslint-plugin-jsdoc": "21.0.0",
     "eslint-plugin-no-null": "1.0.2",
     "eslint-plugin-node": "11.0.0",
     "eslint-plugin-prettier": "3.1.2",
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-standard": "4.0.1",
-    "husky": "3.1.0",
-    "lint-staged": "9.5.0",
+    "husky": "4.2.1",
+    "lint-staged": "10.0.2",
     "prettier": "1.19.1",
-    "semantic-release": "15.13.31",
+    "semantic-release": "16.0.3",
     "syncpack": "4.5.5",
     "typescript": "3.7.5"
   },
@@ -56,18 +56,15 @@
   "lint-staged": {
     "package.json": [
       "syncpack-format --source",
-      "syncpack-set-semver-ranges --dev --source",
-      "git add"
+      "syncpack-set-semver-ranges --dev --source"
     ],
     "{src,examples,perf}/**/*.ts": [
       "eslint --fix",
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ],
     "{src,examples,perf}/**/*.js": [
       "eslint --fix",
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   },
   "main": "lib/cjs/index.js",
