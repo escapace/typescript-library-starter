@@ -75,9 +75,9 @@
   },
   "repository": "escapace/typescript-library-starter",
   "scripts": {
-    "build": "recce build -e src/index.ts",
+    "build": "npx recce build -e src/index.ts",
     "lint": "eslint 'src/**/*.ts'",
-    "test": "recce test --browser 'src/**.spec.ts' --node 'src/**.spec.ts' --reporter lcov --reporter text",
+    "test": "npx recce test --browser 'src/**.spec.ts' --node 'src/**.spec.ts' --reporter lcov --reporter text",
     "typecheck": "tsc --noEmit"
   },
   "sideEffects": false,
