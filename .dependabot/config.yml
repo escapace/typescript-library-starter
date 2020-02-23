@@ -8,6 +8,8 @@ update_configs:
       prefix: "fix"
       prefix_development: "chore"
       include_scope: true
+    default_assignees:
+      - "l5x"
     automerged_updates:
       - match:
           dependency_type: "all"
