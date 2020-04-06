@@ -4,9 +4,9 @@ import { hello } from './index'
 import { assert } from 'chai'
 
 describe('./src/index.spec.ts', () => {
-  it('hello', done => {
+  it('hello', (done) => {
     hello('World')
-      .then(result => {
+      .then((result) => {
         assert.equal(result, 'Hello World')
         done()
       })
