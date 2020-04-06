@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.0.0
+        uses: actions/checkout@v2
       - name: Setup Node.js
-        uses: actions/setup-node@1.4.1
+        uses: actions/setup-node@v1
         with:
           node-version: 13
       - name: Install dependencies
