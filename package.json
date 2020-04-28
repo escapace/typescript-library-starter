@@ -59,11 +59,11 @@
       "syncpack-format --source",
       "syncpack-set-semver-ranges --dev --source"
     ],
-    "{src,examples,perf}/**/*.ts": [
+    "{src,examples,perf}/**/*.ts?(x)": [
       "eslint --fix",
       "prettier --write"
     ],
-    "{src,examples,perf}/**/*.js": [
+    "{src,examples,perf}/**/*.js?(x)": [
       "eslint --fix",
       "prettier --write"
     ]
@@ -77,7 +77,7 @@
   "repository": "escapace/typescript-library-starter",
   "scripts": {
     "build": "npx recce build -e src/index.ts",
-    "lint": "ls-lint && eslint 'src/**/*.ts'",
+    "lint": "ls-lint && eslint 'src/**/*.ts?(x)'",
     "test": "npx recce test --browser 'src/**.spec.ts' --node 'src/**.spec.ts' --reporter lcov --reporter text",
     "typecheck": "tsc --noEmit"
   },
