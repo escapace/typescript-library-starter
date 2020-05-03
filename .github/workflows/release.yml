@@ -9,6 +9,10 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
+      - name: Install required packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install libgbm-dev
       - name: Checkout
         uses: actions/checkout@v2
       - name: Setup Node.js
