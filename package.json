@@ -44,30 +44,10 @@
     "lib"
   ],
   "homepage": "https://github.com/escapace/typescript-library-starter",
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged && npm run typecheck && npm run test"
-    }
-  },
   "keywords": [
     "TypeScript"
   ],
   "license": "MPL-2.0",
-  "lint-staged": {
-    "package.json": [
-      "syncpack-format --source",
-      "syncpack-set-semver-ranges --dev --source"
-    ],
-    "{src,examples,perf}/**/*.ts?(x)": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "{src,examples,perf}/**/*.js?(x)": [
-      "eslint --fix",
-      "prettier --write"
-    ]
-  },
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "private": false,
