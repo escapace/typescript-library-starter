@@ -35,7 +35,7 @@
     "prettier": "2.0.5",
     "semantic-release": "17.0.7",
     "syncpack": "5.0.1",
-    "typescript": "3.8.3"
+    "typescript": "3.9.2"
   },
   "engines": {
     "node": ">=10.16.0"
