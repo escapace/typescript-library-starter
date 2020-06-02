@@ -9,7 +9,7 @@ updates:
     interval: weekly
     day: saturday
     time: '07:00'
-    timezone: Asia/Yerevan
+    timezone: GMT
   open-pull-requests-limit: 10
   assignees:
   - l5x
