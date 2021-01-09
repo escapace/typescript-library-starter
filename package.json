@@ -6,7 +6,7 @@
   "browser": "lib/umd/index.js",
   "bugs": "https://github.com/escapace/typescript-library-starter/issues",
   "dependencies": {
-    "tslib": "^2.0.3"
+    "tslib": "^2.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
