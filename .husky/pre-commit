@@ -1,8 +1,9 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-ls-lint
-lint-staged
-false
+npx --no-install ls-lint
+npx --no-install lint-staged
+# false
+
 npm run typecheck
 npm run test
