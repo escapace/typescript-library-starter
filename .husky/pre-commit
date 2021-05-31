@@ -1,0 +1,8 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+ls-lint
+lint-staged
+false
+npm run typecheck
+npm run test

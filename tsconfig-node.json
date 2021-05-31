@@ -4,5 +4,8 @@
     "declaration": false,
     "target": "es5",
     "module": "CommonJS"
+  },
+  "ts-node": {
+    "transpileOnly": true
   }
 }
