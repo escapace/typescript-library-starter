@@ -60,7 +60,7 @@
   },
   "repository": "https://github.com/escapace/typescript-library-starter.git",
   "scripts": {
-    "build": "rm -rf lib && npm run build:node && npm run build:browser && npm run build:types && mkdir -p lib/browser lib/node lib/types",
+    "build": "rm -rf lib && mkdir -p lib/browser lib/node lib/types && npm run build:node && npm run build:browser && npm run build:types",
     "build:browser": "esbuild src/index.ts --bundle --minify --sourcemap --format=esm --outfile=./lib/browser/index.js",
     "build:node": "esbuild src/index.ts --bundle --sourcemap --format=esm --platform=node --target=node14.17.0 --outfile=./lib/node/index.js",
     "build:types": "tsc --emitDeclarationOnly --declarationDir lib/types",
