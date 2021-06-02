@@ -3,7 +3,5 @@
 
 npx --no-install ls-lint
 npx --no-install lint-staged
-# false
-
 npm run typecheck
 npm run test
