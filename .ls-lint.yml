@@ -1,7 +1,6 @@
 ls:
   .ts: kebab-case
   .d.ts: kebab-case
-  .mock.ts: kebab-case
   .spec.ts: kebab-case
 
 ignore:
