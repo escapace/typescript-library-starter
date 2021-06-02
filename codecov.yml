@@ -12,3 +12,7 @@ coverage:
 comment:
   layout: "header, diff, tree"
   behavior: default  # update if exists else create new
+
+ignore:
+  - "./coverage/tmp/"
+
