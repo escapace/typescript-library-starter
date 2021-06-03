@@ -1,5 +1,5 @@
 {
-  "reporter": ["lcovonly", "text"],
+  "reporter": ["json", "text"],
   "exclude": ["node_modules/**", "**/*.spec.?(m)@(j|t)s?(x)"],
   "excludeAfterRemap": true,
   "branches": 100,
