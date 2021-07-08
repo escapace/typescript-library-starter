@@ -3,9 +3,15 @@ on:
   push:
     branches:
       - trunk
+    paths-ignore:
+      - README.md
+      - LICENSE
   pull_request:
     branches:
       - trunk
+    paths-ignore:
+      - README.md
+      - LICENSE
 jobs:
   test:
     name: Test
