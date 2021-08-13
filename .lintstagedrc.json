@@ -3,7 +3,9 @@
     "syncpack-format --source",
     "syncpack-set-semver-ranges --dev --source"
   ],
+  "*.json": ["prettier --write"],
   "*.md": ["prettier --write"],
-  "{src,examples,perf}/**/*.ts?(x)": ["eslint --fix", "prettier --write"],
-  "{src,examples,perf}/**/*.js?(x)": ["eslint --fix", "prettier --write"]
+  "{src}/**/*.ts?(x)": ["eslint --fix", "prettier --write"],
+  "{src}/**/*.js?(x)": ["eslint --fix", "prettier --write"],
+  "{src}/**/*.graphql": ["prettier --write"]
 }
