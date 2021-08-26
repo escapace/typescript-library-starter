@@ -10,7 +10,8 @@ const directoryRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)),
 const directoryTests = path.join(directoryRoot, 'lib/tests')
 const directorySrc = path.join(directoryRoot, 'src')
 
-console.log(directoryTests)
+process.umask(0o022)
+process.chdir(directoryRoot)
 
 await remove(directoryTests)
 await mkdir(directoryTests, { recursive: true })
@@ -20,8 +21,6 @@ const entryPoints = await fastGlob(['**/*.spec.?(m)(j|t)s?(x)'], {
   cwd: directorySrc,
   dot: true
 })
-
-process.cwd(directoryRoot)
 
 await build({
   entryPoints,

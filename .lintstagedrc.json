@@ -5,7 +5,6 @@
   ],
   "*.json": ["prettier --write"],
   "*.md": ["prettier --write"],
-  "{src}/**/*.ts?(x)": ["eslint --fix", "prettier --write"],
-  "{src}/**/*.js?(x)": ["eslint --fix", "prettier --write"],
+  "{src}/**/*.*.{js,mjs,cjs,ts,tsx,jsx}": ["eslint --fix", "prettier --write"],
   "{src}/**/*.graphql": ["prettier --write"]
 }
