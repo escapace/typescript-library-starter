@@ -27,7 +27,7 @@ await build({
   sourcemap: true,
   bundle: true,
   platform: 'node',
-  target: 'node14.17.0',
+  target: [`node${process.version.slice(1)}`],
   format: 'esm',
   outbase: directorySrc,
   outdir: directoryTests,
