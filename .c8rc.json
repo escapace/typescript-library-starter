@@ -1,7 +1,7 @@
 {
   "all": true,
   "reporter": ["json", "text"],
-  "exclude": ["node_modules/**", "**/*.spec.?(m)@(j|t)s?(x)", "scripts"],
+  "exclude": ["node_modules/**", "**/*.spec.?(m)@(j|t)s?(x)", "scripts", "lib"],
   "excludeAfterRemap": true,
   "branches": 100,
   "functions": 100,
