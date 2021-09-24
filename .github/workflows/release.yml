@@ -1,4 +1,4 @@
-name: Release
+name: release
 on:
   schedule:
     - cron: '10 16 * * 2'
@@ -6,40 +6,32 @@ on:
     types: [release]
 jobs:
   release:
-    name: Release
+    name: release
     runs-on: ubuntu-latest
     steps:
-      - name: Install required packages
-        run: |
-          sudo apt-get update
-          sudo apt-get install libgbm-dev
-      - name: Checkout
+      - name: checkout
         uses: actions/checkout@v2
-      - name: Setup Node.js
+      - name: setup node
         uses: actions/setup-node@v2.4.0
         with:
           node-version: 16
-      - name: Cache
+      - name: cache
         uses: actions/cache@v2.1.6
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Install dependencies
+      - name: install dependencies
         run: npm ci
-      - name: Typecheck
+      - name: typecheck
         run: npm run typecheck
-      - name: Test
+      - name: test
         run: npm run test
-      - name: Build
+      - name: build
         run: npm run build
-      - name: Release
+      - name: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
-      - name: Code Coverage
-        uses: codecov/codecov-action@v2.0.3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
