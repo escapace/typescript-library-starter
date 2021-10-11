@@ -2,12 +2,11 @@
 . "$(dirname "$0")/_/husky.sh"
 set -euo pipefail
 
-# pnpm exec  syncpack fix-mismatches --source 'package.json' --source 'example/package.json' || exit 1
-pnpm exec syncpack set-semver-ranges --dev --source 'package.json' || exit 1
-pnpm exec syncpack format --source 'package.json' || exit 1
-git add package.json
+# npx syncpack fix-mismatches --source 'package.json' --source 'example/package.json' || exit 1
+# npx syncpack set-semver-ranges --dev --source 'package.json' --source 'example/package.json' || exit 1
+npx syncpack format --source 'package.json' || exit 1
 
-pnpm exec lint-staged || exit 1
-pnpm run lint || exit 1
-pnpm run typecheck || exit 1
-pnpm run test || exit 1
+npx --no-install lint-staged || exit 1
+npm run lint || exit 1
+npm run typecheck || exit 1
+npm run test || exit 1
