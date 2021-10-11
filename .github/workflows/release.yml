@@ -18,20 +18,20 @@ jobs:
       - name: cache
         uses: actions/cache@v2.1.6
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-node-
       - name: install dependencies
-        run: npm ci
+        run: pnpm install
       - name: typecheck
-        run: npm run typecheck
+        run: pnpm run typecheck
       - name: test
-        run: npm run test
+        run: pnpm run test
       - name: build
-        run: npm run build
+        run: pnpm run build
       - name: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release
+        run: pnpm exec semantic-release
