@@ -26,20 +26,18 @@ jobs:
       - name: cache
         uses: actions/cache@v2.1.6
         with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
       - name: install dependencies
-        run: |
-          npm install -g pnpm
-          pnpm install
+        run: npm ci
       - name: typecheck
-        run: pnpm run typecheck
+        run: npm run typecheck
       - name: test
-        run: pnpm run test
+        run: npm run test
       - name: build
-        run: pnpm run build
+        run: npm run build
       - name: code coverage
         uses: codecov/codecov-action@v2.1.0
         with:
