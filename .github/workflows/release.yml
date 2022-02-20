@@ -1,9 +1,17 @@
 name: release
 on:
-  schedule:
-    - cron: '10 16 * * 2'
-  repository_dispatch:
-    types: [release]
+  push:
+    branches:
+      - trunk
+    paths-ignore:
+      - README.md
+      - LICENSE
+  pull_request:
+    branches:
+      - trunk
+    paths-ignore:
+      - README.md
+      - LICENSE
 jobs:
   release:
     name: release
@@ -11,27 +19,28 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
+      - name: install pnpm
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.30.1
       - name: setup node
-        uses: actions/setup-node@v2.4.1
+        uses: actions/setup-node@v2.5.1
         with:
-          node-version: 16
-      - name: cache
-        uses: actions/cache@v2.1.6
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version: 17
       - name: install dependencies
-        run: npm ci
+        run: pnpm install
       - name: typecheck
-        run: npm run typecheck
+        run: pnpm run typecheck
       - name: test
-        run: npm run test
+        run: pnpm run test
       - name: build
-        run: npm run build
+        run: pnpm run build
       - name: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
+      - name: code coverage
+        uses: codecov/codecov-action@v2.1.0
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}

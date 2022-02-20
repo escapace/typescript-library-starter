@@ -1,15 +1,9 @@
 import { build } from 'esbuild'
-import execa from 'execa'
+import { execa } from 'execa'
 import fse from 'fs-extra'
 import { mkdir } from 'fs/promises'
 import path from 'path'
-import { fileURLToPath } from 'url'
-
-const cwd = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../')
-
-const external = Object.keys(
-  (await fse.readJSON(path.join(cwd, 'package.json')))['dependencies'] ?? {}
-)
+import { cwd, target, external } from './constants.mjs'
 
 const options = {
   cjs: {
@@ -31,18 +25,18 @@ await Promise.all(
     await mkdir(outdir, { recursive: true })
 
     await build({
-      entryPoints: ['src/index.ts'],
-      sourcemap: true,
       bundle: true,
-      platform: 'node',
-      target: 'node14.17.0',
-      format,
-      tsconfig: path.join(cwd, 'tsconfig-build.json'),
+      entryPoints: ['src/index.ts'],
       external: ['esbuild', ...external],
+      format,
+      logLevel: 'info',
+      outExtension: { '.js': `.${format === 'esm' ? 'mjs' : 'cjs'}` },
       outbase: path.join(cwd, 'src'),
       outdir,
-      outExtension: { '.js': `.${format === 'esm' ? 'mjs' : 'cjs'}` },
-      logLevel: 'info'
+      platform: 'node',
+      sourcemap: true,
+      target,
+      tsconfig: path.join(cwd, 'tsconfig-build.json')
     })
   })
 )
