@@ -3,15 +3,13 @@ import fastGlob from 'fast-glob'
 import { remove } from 'fs-extra'
 import { mkdir } from 'fs/promises'
 import path from 'path'
+import { cwd, target, external } from './constants.mjs'
 
-import { fileURLToPath } from 'url'
-
-const directoryRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../')
-const directoryTests = path.join(directoryRoot, 'lib/tests')
-const directorySrc = path.join(directoryRoot, 'src')
+const directoryTests = path.join(cwd, 'lib/tests')
+const directorySrc = path.join(cwd, 'src')
 
 process.umask(0o022)
-process.chdir(directoryRoot)
+process.chdir(cwd)
 
 await remove(directoryTests)
 await mkdir(directoryTests, { recursive: true })
@@ -23,13 +21,14 @@ const entryPoints = await fastGlob(['**/*.spec.?(m)(j|t)s?(x)'], {
 })
 
 await build({
-  entryPoints,
-  sourcemap: true,
   bundle: true,
-  platform: 'node',
-  target: [`node${process.version.slice(1)}`],
+  entryPoints,
+  external,
   format: 'esm',
+  logLevel: 'info',
   outbase: directorySrc,
   outdir: directoryTests,
-  logLevel: 'info'
+  platform: 'node',
+  sourcemap: true,
+  target
 })
