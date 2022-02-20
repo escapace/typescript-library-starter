@@ -1,4 +1,5 @@
 {
+  "enabledManagers": ["npm"],
   extends: [
     'config:base',
     'schedule:weekly',
