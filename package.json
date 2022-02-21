@@ -44,7 +44,9 @@
     }
   },
   "files": [
-    "lib"
+    "lib/cjs",
+    "lib/esm",
+    "lib/types"
   ],
   "homepage": "https://github.com/escapace/typescript-library-starter",
   "license": "MPL-2.0",
