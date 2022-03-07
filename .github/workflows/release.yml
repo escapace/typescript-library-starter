@@ -19,6 +19,13 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
+      - name: pnpm cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-
       - name: install pnpm
         uses: pnpm/action-setup@v2.2.1
         with:
@@ -39,7 +46,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release
+        run: pnpm exec semantic-release
       - name: code coverage
         uses: codecov/codecov-action@v2.1.0
         with:
