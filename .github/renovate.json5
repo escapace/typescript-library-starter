@@ -18,11 +18,13 @@
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],
-      "rangeStrategy": "pin"
+      "rangeStrategy": "pin",
+      "semanticCommitType": "chore"
     },
     {
       "matchDepTypes": ["dependencies"],
-      "rangeStrategy": "bump"
+      "rangeStrategy": "bump",
+      "semanticCommitType": "fix"
     }
   ],
   lockFileMaintenance: {
