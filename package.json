@@ -5,8 +5,8 @@
   "author": "escapace <opensource@escapace.com>",
   "bugs": "https://github.com/escapace/typescript-library-starter/issues",
   "devDependencies": {
-    "@commitlint/cli": "16.2.4",
-    "@commitlint/config-conventional": "16.2.4",
+    "@commitlint/cli": "17.0.0",
+    "@commitlint/config-conventional": "17.0.0",
     "@ls-lint/ls-lint": "1.11.0",
     "@types/chai": "4.3.1",
     "@types/mocha": "9.1.1",
