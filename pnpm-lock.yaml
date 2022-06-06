@@ -27,7 +27,7 @@ specifiers:
   prettier: 2.6.2
   prettier-config-escapace: 1.0.4
   semantic-release: 19.0.2
-  syncpack: 7.2.2
+  syncpack: 8.0.0
   typescript: 4.7.3
 
 devDependencies:
@@ -57,7 +57,7 @@ devDependencies:
   prettier: 2.6.2
   prettier-config-escapace: 1.0.4
   semantic-release: 19.0.2
-  syncpack: 7.2.2
+  syncpack: 8.0.0
   typescript: 4.7.3
 
 packages:
@@ -3701,8 +3701,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /syncpack/7.2.2:
-    resolution: {integrity: sha512-2BkDzGtTbnl9oe6QzzpvAm1cfj3gMar9dD9yurD4YTbJyZaypDuPwH+DVEiznP870FdmFt3mclxNOREaL6/pZw==}
+  /syncpack/8.0.0:
+    resolution: {integrity: sha512-/hiK6UXYM+ttfyonZ9WCPnm+ORTxAmzc5wlTwQfnw1nojHW19RVWCWBe5Z8G9HLbYzaBdVUCmvRCjNuqsU1YNw==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
