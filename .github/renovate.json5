@@ -1,32 +1,36 @@
 {
-  "enabledManagers": ["npm"],
+  enabledManagers: ['npm'],
   extends: [
     'config:base',
     'schedule:weekly',
-    ':automergeLinters',
-    ':automergeMinor',
-    ':automergeTesters',
     ':enableVulnerabilityAlerts',
     ':rebaseStalePrs',
     ':semanticCommits',
     ':updateNotScheduled',
     'group:allNonMajor'
   ],
-  major: {
-    automerge: false
-  },
-  "packageRules": [
+  automerge: false,
+  stabilityDays: 7,
+  packageRules: [
     {
-      "matchDepTypes": ["devDependencies"],
-      "rangeStrategy": "pin",
-      "semanticCommitType": "chore"
+      matchDepTypes: ['devDependencies'],
+      rangeStrategy: 'pin',
+      semanticCommitType: 'chore'
     },
     {
-      "matchDepTypes": ["dependencies"],
-      "rangeStrategy": "bump",
-      "semanticCommitType": "fix"
+      matchDepTypes: ['dependencies'],
+      rangeStrategy: 'bump',
+      semanticCommitType: 'fix'
+    },
+    {
+      matchDepTypes: ['peerDependencies'],
+      rangeStrategy: 'widen',
+      semanticCommitType: 'fix'
     }
   ],
+  vulnerabilityAlerts: {
+    stabilityDays: 0
+  },
   lockFileMaintenance: {
     enabled: true
   },
@@ -34,5 +38,6 @@
   ignorePresets: [':prHourlyLimit2'],
   labels: ['dependencies'],
   node: false,
+  prCreation: 'not-pending',
   rebaseWhen: 'conflicted'
 }
