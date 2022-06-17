@@ -1,0 +1,23 @@
+changelog:
+  categories:
+    - title: Changes
+      labels:
+        - breaking-change
+    - title: Features
+      labels:
+        - feature
+    - title: Fixes
+      labels:
+        - fix
+    - title: Improvements
+      labels:
+        - dependencies
+        - documentation
+        - '*'
+  exclude:
+    labels:
+      - duplicate
+      - wontfix
+      - question
+      - invalid
+      - github-actions
