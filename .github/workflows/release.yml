@@ -32,7 +32,7 @@ jobs:
         with:
           node-version: ${{ needs.node-version.outputs.value }}
       - name: install pnpm
-        uses: pnpm/action-setup@v2.2.1
+        uses: pnpm/action-setup@v2.2.2
         with:
           version: ${{ needs.pnpm-version.outputs.value }}
           run_install: false
