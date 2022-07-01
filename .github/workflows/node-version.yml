@@ -2,7 +2,7 @@ on:
   workflow_call:
     outputs:
       value:
-        description: "Node.js version"
+        description: 'Node.js version'
         value: ${{ jobs.main.outputs.value }}
 jobs:
   main:

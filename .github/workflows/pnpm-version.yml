@@ -2,7 +2,7 @@ on:
   workflow_call:
     outputs:
       value:
-        description: "pnpm version"
+        description: 'pnpm version'
         value: ${{ jobs.main.outputs.value }}
 jobs:
   main:
