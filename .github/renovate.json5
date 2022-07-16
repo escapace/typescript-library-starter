@@ -34,7 +34,8 @@
   lockFileMaintenance: {
     enabled: true
   },
-  dependencyDashboard: false,
+  internalChecksFilter: 'strict',
+  dependencyDashboard: true,
   ignorePresets: [':prHourlyLimit2'],
   labels: ['dependencies'],
   node: false,
