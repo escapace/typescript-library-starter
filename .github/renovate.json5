@@ -1,6 +1,8 @@
 {
   enabledManagers: ['npm'],
   extends: [
+    'github>whitesource/merge-confidence:beta',
+    'github>renovatebot/spring-remediations',
     'config:base',
     'schedule:weekly',
     ':enableVulnerabilityAlerts',
@@ -38,7 +40,9 @@
   dependencyDashboard: true,
   ignorePresets: [':prHourlyLimit2'],
   labels: ['dependencies'],
-  node: false,
+  node: {
+    enabled: false
+  },
   prCreation: 'not-pending',
   rebaseWhen: 'conflicted'
 }
