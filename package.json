@@ -21,7 +21,7 @@
     "eslint": "8.19.0",
     "eslint-config-escapace": "3.14.0",
     "eslint-config-prettier": "8.5.0",
-    "eslint-plugin-editorconfig": "3.2.0",
+    "eslint-plugin-editorconfig": "4.0.2",
     "eslint-plugin-no-null": "1.0.2",
     "execa": "6.1.0",
     "fast-glob": "3.2.11",
