@@ -27,6 +27,13 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
+        if: github.event_name == 'pull_request'
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - name: checkout
+        if: github.event_name == 'push'
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - name: setup node
