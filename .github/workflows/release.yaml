@@ -16,9 +16,9 @@ on:
       - LICENSE
 jobs:
   pnpm-version:
-    uses: ./.github/workflows/pnpm-version.yml
+    uses: ./.github/workflows/pnpm-version.yaml
   node-version:
-    uses: ./.github/workflows/node-version.yml
+    uses: ./.github/workflows/node-version.yaml
   release:
     needs:
       - pnpm-version
@@ -32,7 +32,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
       - name: checkout
-        if: github.event_name == 'push'
+        if: github.event_name != 'pull_request'
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
