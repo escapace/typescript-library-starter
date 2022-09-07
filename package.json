@@ -55,6 +55,13 @@
   "license": "MPL-2.0",
   "main": "lib/cjs/index.cjs",
   "module": "lib/esm/index.mjs",
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "ts-node"
+      ]
+    }
+  },
   "private": false,
   "publishConfig": {
     "access": "public"
