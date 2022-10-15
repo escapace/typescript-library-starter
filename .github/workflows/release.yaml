@@ -34,7 +34,7 @@ jobs:
         with:
           node-version: ${{ needs.context.outputs.node-version }}
       - name: install pnpm
-        uses: pnpm/action-setup@v2.2.2
+        uses: pnpm/action-setup@v2.2.3
         with:
           version: ${{ needs.context.outputs.pnpm-version }}
           run_install: false
