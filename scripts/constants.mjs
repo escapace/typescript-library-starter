@@ -10,4 +10,7 @@ export const cwd = path.resolve(
 
 export const packageJSON = await fse.readJSON(path.join(cwd, 'package.json'))
 export const external = Object.keys(packageJSON.dependencies ?? {})
-export const target = [`node${semver.minVersion(packageJSON.engines.node).version}`]
+export const target = [
+  `node${semver.minVersion(packageJSON.engines.node).version}`,
+  'es2022'
+]

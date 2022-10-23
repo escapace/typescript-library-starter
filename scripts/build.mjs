@@ -33,7 +33,7 @@ await Promise.all(
       outExtension: { '.js': `.${format === 'esm' ? 'mjs' : 'cjs'}` },
       outbase: path.join(cwd, 'src'),
       outdir,
-      platform: 'node',
+      platform: 'neutral',
       sourcemap: true,
       target,
       tsconfig: path.join(cwd, 'tsconfig-build.json')
