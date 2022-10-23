@@ -15,7 +15,7 @@ specifiers:
   changelogithub: 0.12.4
   esbuild: 0.15.12
   eslint: 8.26.0
-  eslint-config-escapace: 3.14.0
+  eslint-config-escapace: 3.15.0
   eslint-config-prettier: 8.5.0
   eslint-plugin-editorconfig: 4.0.2
   eslint-plugin-no-null: 1.0.2
@@ -47,7 +47,7 @@ devDependencies:
   changelogithub: 0.12.4
   esbuild: 0.15.12
   eslint: 8.26.0
-  eslint-config-escapace: 3.14.0_cyntaeb674jkpdxqiiqj4m3u3e
+  eslint-config-escapace: 3.15.0_cyntaeb674jkpdxqiiqj4m3u3e
   eslint-config-prettier: 8.5.0_eslint@8.26.0
   eslint-plugin-editorconfig: 4.0.2
   eslint-plugin-no-null: 1.0.2_eslint@8.26.0
@@ -1412,12 +1412,12 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-config-escapace/3.14.0_cyntaeb674jkpdxqiiqj4m3u3e:
-    resolution: {integrity: sha512-TsIY8F/9Z+BGQ4oYX3fgG2DYg/OROoXch9H1WnXrawriu73s+Vx3GBy2Ci/hd7jX4WUOGECvvb9hs4NSYsFEnA==}
+  /eslint-config-escapace/3.15.0_cyntaeb674jkpdxqiiqj4m3u3e:
+    resolution: {integrity: sha512-52zLNePOuEb00GiwKjrsvDBNZwHDWjBZas/UOQJFT2BUyocXAW5bl/Hf1ygnmzgsoCfup0oPnVeJvpyEy1VqRg==}
     peerDependencies:
-      '@typescript-eslint/eslint-plugin': ^5.30.4
-      '@typescript-eslint/parser': ^5.30.4
-      eslint: ^8.19.0
+      '@typescript-eslint/eslint-plugin': ^5.40.1
+      '@typescript-eslint/parser': ^5.40.1
+      eslint: ^8.26.0
       eslint-config-prettier: ^8.5.0
       eslint-plugin-editorconfig: ^4.0.2
       eslint-plugin-no-null: ^1.0.2
