@@ -40,8 +40,7 @@ jobs:
           run_install: false
       - name: get pnpm store directory
         id: pnpm-store-path
-        run: |
-          echo "::set-output name=value::$(pnpm store path)"
+        run: echo "value=$(pnpm store path)" >> $GITHUB_OUTPUT
       - name: pnpm cache
         uses: actions/cache@v3
         with:
