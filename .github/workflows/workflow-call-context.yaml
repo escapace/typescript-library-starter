@@ -34,9 +34,9 @@ jobs:
         shell: bash
         run: |
           if [[ "${{ github.event_name }}" == "pull_request" ]]; then
-            echo "::set-output name=value::${GITHUB_HEAD_REF}"
+            echo "value=${GITHUB_HEAD_REF}" >> $GITHUB_OUTPUT
           else
-            echo "::set-output name=value::${GITHUB_REF}"
+            echo "value=${GITHUB_REF}" >> $GITHUB_OUTPUT
           fi
       - name: checkout
         uses: actions/checkout@v3
@@ -44,14 +44,14 @@ jobs:
           ref: ${{ steps.ref.outputs.value }}
           fetch-depth: 0
       - id: action-context
-        uses: escapace/action-context@v0.3.1
+        uses: escapace/action-context@v0.3.2
       - id: node-version
         name: node-version
         shell: bash
         run: |
-          echo "::set-output name=value::$(cat package.json | jq -r .engines.node | grep -oP '([0-9]+)\.([0-9]+)\.([0-9]+)' | head -n 1)"
+          echo "value=$(cat package.json | jq -r .engines.node | grep -oP '([0-9]+)\.([0-9]+)\.([0-9]+)' | head -n 1)"  >> $GITHUB_OUTPUT
       - id: pnpm-version
         name: pnpm-version
         shell: bash
         run: |
-          echo "::set-output name=value::$(cat package.json | jq -r .engines.pnpm | grep -oP '([0-9]+)\.([0-9]+)\.([0-9]+)' | head -n 1)"
+          echo "value=$(cat package.json | jq -r .engines.pnpm | grep -oP '([0-9]+)\.([0-9]+)\.([0-9]+)' | head -n 1)" >> $GITHUB_OUTPUT
