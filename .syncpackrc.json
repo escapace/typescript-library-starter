@@ -22,7 +22,7 @@
       "dependencies": ["**"],
       "dependencyTypes": ["prod"],
       "packages": ["**"],
-      "range": ""
+      "range": "^"
     }
   ],
   "source": ["package.json"]
