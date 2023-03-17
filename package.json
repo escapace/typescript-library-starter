@@ -43,17 +43,15 @@
   "exports": {
     ".": {
       "import": "./lib/esm/index.mjs",
-      "require": "./lib/cjs/index.cjs"
+      "types": "./lib/types/index.d.ts"
     }
   },
   "files": [
-    "lib/cjs",
     "lib/esm",
     "lib/types"
   ],
   "homepage": "https://github.com/escapace/typescript-library-starter",
   "license": "MPL-2.0",
-  "main": "lib/cjs/index.cjs",
   "module": "lib/esm/index.mjs",
   "pnpm": {
     "peerDependencyRules": {
