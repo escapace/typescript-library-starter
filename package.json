@@ -53,13 +53,6 @@
   "homepage": "https://github.com/escapace/typescript-library-starter",
   "license": "MPL-2.0",
   "module": "lib/esm/index.mjs",
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "ts-node"
-      ]
-    }
-  },
   "private": false,
   "publishConfig": {
     "access": "public"
