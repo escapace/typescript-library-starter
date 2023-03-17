@@ -5,41 +5,28 @@ import { mkdir } from 'fs/promises'
 import path from 'path'
 import { cwd, target, external } from './constants.mjs'
 
-const options = {
-  cjs: {
-    outdir: path.join(cwd, 'lib/cjs')
-  },
-  esm: {
-    outdir: path.join(cwd, 'lib/esm')
-  }
-}
-
 process.umask(0o022)
 process.chdir(cwd)
 
-await Promise.all(
-  Object.keys(options).map(async (format) => {
-    const { outdir } = options[format]
+const outdir = path.join(cwd, 'lib/esm')
 
-    await fse.remove(outdir)
-    await mkdir(outdir, { recursive: true })
+await fse.remove(outdir)
+await mkdir(outdir, { recursive: true })
 
-    await build({
-      bundle: true,
-      entryPoints: ['src/index.ts'],
-      external: ['esbuild', ...external],
-      format,
-      logLevel: 'info',
-      outExtension: { '.js': `.${format === 'esm' ? 'mjs' : 'cjs'}` },
-      outbase: path.join(cwd, 'src'),
-      outdir,
-      platform: 'neutral',
-      sourcemap: true,
-      target,
-      tsconfig: path.join(cwd, 'tsconfig-build.json')
-    })
-  })
-)
+await build({
+  bundle: true,
+  entryPoints: ['src/index.ts'],
+  external: ['esbuild', ...external],
+  format: 'esm',
+  logLevel: 'info',
+  outExtension: { '.js': '.mjs' },
+  outbase: path.join(cwd, 'src'),
+  outdir,
+  platform: 'neutral',
+  sourcemap: true,
+  target,
+  tsconfig: path.join(cwd, 'tsconfig-build.json')
+})
 
 await fse.remove(path.join(cwd, 'lib/types'))
 
