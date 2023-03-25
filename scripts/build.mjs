@@ -17,6 +17,7 @@ await build({
   bundle: true,
   entryPoints: ['src/index.ts'],
   external: ['esbuild', ...external],
+  splitting: true,
   format: 'esm',
   logLevel: 'info',
   outExtension: { '.js': '.mjs' },
