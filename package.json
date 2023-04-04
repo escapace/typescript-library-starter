@@ -54,9 +54,6 @@
   "license": "MPL-2.0",
   "module": "lib/esm/index.mjs",
   "private": false,
-  "publishConfig": {
-    "access": "public"
-  },
   "repository": "https://github.com/escapace/typescript-library-starter.git",
   "scripts": {
     "build": "node ./scripts/build.mjs",

@@ -69,7 +69,7 @@ jobs:
       - name: pnpm release
         if: needs.context.outputs.environment == 'production'
         run: |
-          pnpm run release -- ${{ needs.context.outputs.version }}
+          pnpm run release ${{ needs.context.outputs.version }}
       - name: github release
         if: needs.context.outputs.environment == 'production'
         run: |
