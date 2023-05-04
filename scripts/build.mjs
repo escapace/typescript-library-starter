@@ -25,6 +25,7 @@ await build({
   outdir,
   platform: 'neutral',
   sourcemap: true,
+  minifySyntax: true,
   target,
   tsconfig: path.join(cwd, 'tsconfig-build.json')
 })
