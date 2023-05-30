@@ -57,6 +57,7 @@ async function main() {
     'pnpm',
     [
       'publish',
+      '--provenance',
       '--no-git-checks',
       '--access',
       access,
