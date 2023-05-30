@@ -52,15 +52,12 @@ async function main() {
   ])
 
   await execa(
-    'pnpm',
+    'npm',
     [
       'publish',
       '--provenance',
-      '--no-git-checks',
       '--access',
       access,
-      '--publish-branch',
-      'trunk',
       args['--dry-run'] ? '--dry-run' : undefined
     ].filter((value) => value !== undefined)
   )
