@@ -52,7 +52,7 @@ async function main() {
   ])
 
   await execa(
-    'npm',
+    'pnpm',
     [
       'publish',
       '--provenance',
