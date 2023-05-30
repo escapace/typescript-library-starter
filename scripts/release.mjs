@@ -1,9 +1,9 @@
+import arg from 'arg'
+import { execa } from 'execa'
 import fse from 'fs-extra'
 import path from 'path'
 import process from 'process'
 import semver from 'semver'
-import arg from 'arg'
-import { execa } from 'execa'
 
 const error = (message) => {
   console.error(message)
@@ -59,8 +59,9 @@ async function main() {
       '--access',
       access,
       args['--dry-run'] ? '--dry-run' : undefined
-    ].filter((value) => value !== undefined)
-  ).pipeAll(process.stdout)
+    ].filter((value) => value !== undefined),
+    { stdout: process.stdout, stderr: process.stderr }
+  )
 }
 
 main()
