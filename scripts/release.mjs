@@ -51,10 +51,8 @@ async function main() {
     packageJsonPath
   ])
 
-  await execa('pnpm', ['run', 'build'])
-
   await execa(
-    'pnpm',
+    'npm',
     [
       'publish',
       '--provenance',
