@@ -31,8 +31,8 @@ jobs:
       - ci
     permissions:
       id-token: write
-      contents: write
-      packages: write
+      # contents: write
+      # packages: write
     steps:
       - name: setup node
         uses: actions/setup-node@v3
@@ -62,9 +62,9 @@ jobs:
             always-auth=true
           EOF
 
-          npm publish *.tgz --provenance
-      - name: github release
-        run: |
-          npx changelogithub
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          npm publish --provenance *.tgz
+      # - name: github release
+      #   run: |
+      #     npx changelogithub
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
