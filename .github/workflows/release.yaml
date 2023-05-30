@@ -79,6 +79,8 @@ jobs:
           EOF
 
           pnpm run release ${{ needs.context.outputs.version }}
+        env:
+          NPM_CONFIG_PROVENANCE: true
       - name: github release
         run: |
           pnpm exec changelogithub
