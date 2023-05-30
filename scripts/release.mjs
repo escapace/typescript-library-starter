@@ -60,7 +60,7 @@ async function main() {
       access,
       args['--dry-run'] ? '--dry-run' : undefined
     ].filter((value) => value !== undefined)
-  )
+  ).pipeAll(process.stdout)
 }
 
 main()
