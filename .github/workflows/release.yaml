@@ -52,7 +52,7 @@ jobs:
 
           npm publish --provenance --access public *.tgz
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: publish
         run: |
           cat << EOF > "$HOME/.npmrc"
@@ -64,7 +64,7 @@ jobs:
 
           npm publish --provenance --access public *.tgz
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       # - name: github release
       #   run: |
       #     npx changelogithub
