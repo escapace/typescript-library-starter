@@ -31,7 +31,7 @@ jobs:
       - ci
     permissions:
       id-token: write
-      packages: write
+      # packages: write
     steps:
       - name: setup node
         uses: actions/setup-node@v3
@@ -41,18 +41,18 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: package
-      - name: publish
-        run: |
-          cat << EOF > "$HOME/.npmrc"
-            //npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
-            @escapace:registry=https://npm.pkg.github.com
-            provenance=true
-            always-auth=true
-          EOF
-
-          npm publish --provenance --access public *.tgz
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: publish
+      #   run: |
+      #     cat << EOF > "$HOME/.npmrc"
+      #       //npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
+      #       @escapace:registry=https://npm.pkg.github.com
+      #       provenance=true
+      #       always-auth=true
+      #     EOF
+      #
+      #     npm publish --provenance --access public *.tgz
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: publish
         run: |
           cat << EOF > "$HOME/.npmrc"
