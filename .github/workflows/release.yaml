@@ -42,17 +42,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ needs.context.outputs.node-version }}
-      - name: write .npmrc
-        run: |
-          cat << EOF > "$HOME/.npmrc"
-            //registry.npmjs.org/:_authToken=$NPM_TOKEN
-            //npm.pkg.github.com/:_authToken=$GITHUB_TOKEN
-            @escapace:registry=https://npm.pkg.github.com
-            always-auth=true
-          EOF
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: install pnpm
         uses: pnpm/action-setup@v2.2.4
         with:
@@ -68,16 +57,27 @@ jobs:
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store
-      - name: install dependencies
-        run: pnpm install
       - name: restore lib cache
         uses: actions/download-artifact@v3
         with:
           name: context
           path: lib
-      - name: pnpm release
+      - name: write .npmrc
         run: |
-          pnpm run release -- ${{ needs.context.outputs.version }}
+          cat << EOF > "$HOME/.npmrc"
+            //npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}
+            @escapace:registry=https://npm.pkg.github.com
+            always-auth=true
+          EOF
+
+          pnpm install
+          pnpm run release ${{ needs.context.outputs.version }}
+
+          cat << EOF > "$HOME/.npmrc"
+            //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
+          EOF
+
+          pnpm run release ${{ needs.context.outputs.version }}
       - name: github release
         run: |
           pnpm exec changelogithub
