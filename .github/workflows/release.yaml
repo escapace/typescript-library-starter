@@ -31,8 +31,7 @@ jobs:
       - ci
     permissions:
       id-token: write
-      # contents: write
-      # packages: write
+      packages: write
     steps:
       - name: setup node
         uses: actions/setup-node@v3
@@ -52,7 +51,7 @@ jobs:
             always-auth=true
           EOF
 
-          npm publish *.tgz --provenance
+          npm publish  --provenance *.tgz
 
           cat << EOF > "$HOME/.npmrc"
             //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
