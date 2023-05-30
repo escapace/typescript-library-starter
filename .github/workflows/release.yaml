@@ -22,7 +22,7 @@ jobs:
       ref: ${{ needs.context.outputs.ref }}
       node-version: ${{ needs.context.outputs.node-version }}
       pnpm-version: ${{ needs.context.outputs.pnpm-version }}
-      upload-context: true
+      version: ${{ needs.context.outputs.version }}
   release:
     if: needs.context.outputs.environment == 'production'
     runs-on: ubuntu-latest
@@ -38,7 +38,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ needs.context.outputs.node-version }}
-      - name: restore context
+      - name: download package
         uses: actions/download-artifact@v3
         with:
           name: package
