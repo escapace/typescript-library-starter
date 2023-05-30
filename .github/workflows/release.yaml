@@ -63,11 +63,13 @@ jobs:
         with:
           name: context
           path: lib
-      - name: write .npmrc
+      - name: publish
         run: |
           cat << EOF > "$HOME/.npmrc"
+            //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
             //npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}
             @escapace:registry=https://npm.pkg.github.com
+            provenance=true
             always-auth=true
           EOF
 
@@ -76,6 +78,10 @@ jobs:
 
           cat << EOF > "$HOME/.npmrc"
             //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
+            //npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}
+            @escapace:registry=https://registry.npmjs.org
+            provenance=true
+            always-auth=true
           EOF
 
           pnpm run release ${{ needs.context.outputs.version }}
