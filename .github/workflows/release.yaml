@@ -44,7 +44,6 @@ jobs:
           name: package
       - name: install latest npm
         run: |
-          npm --version
           npm install -g npm
           npm --version
       - name: publish to github packages
@@ -71,10 +70,19 @@ jobs:
           npm publish --provenance --access public *.tgz
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+      # - uses: actions/checkout@v3
+      #   with:
+      #     fetch-depth: 0
       - name: github release
-        run: npx changelogithub
+        run: |
+          echo "${{ needs.context.outputs.changelog }}" > changelog.md
+
+          if [[ "${{ needs.context.outputs.prerelease }}" == "true" ]]; then
+            gh release create v${{ needs.context.outputs.version }} --notes-file changelog.md
+          else
+            gh release create v${{ needs.context.outputs.version }} --notes-file changelog.md
+          fi
+
+          # npx changelogithub
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
