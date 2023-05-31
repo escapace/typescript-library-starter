@@ -86,7 +86,5 @@ jobs:
             gh release create v${{ needs.context.outputs.version }} \
               --notes-file changelog.md
           fi
-
-          # npx changelogithub
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
