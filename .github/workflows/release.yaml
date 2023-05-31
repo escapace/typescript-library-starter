@@ -70,17 +70,22 @@ jobs:
           npm publish --provenance --access public *.tgz
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      # - uses: actions/checkout@v3
-      #   with:
-      #     fetch-depth: 0
+      - uses: actions/checkout@v3
+        # with:
+        #   fetch-depth: 0
       - name: github release
         run: |
           echo "${{ needs.context.outputs.changelog }}" > changelog.md
 
           if [[ "${{ needs.context.outputs.prerelease }}" == "true" ]]; then
-            gh release create v${{ needs.context.outputs.version }} --notes-file changelog.md
+            gh release create v${{ needs.context.outputs.version }} \
+              --prerelease \
+              --target ${{ needs.context.outputs.ref }} \
+              --notes-file changelog.md
           else
-            gh release create v${{ needs.context.outputs.version }} --notes-file changelog.md
+            gh release create v${{ needs.context.outputs.version }} \
+              --target ${{ needs.context.outputs.ref }} \
+              --notes-file changelog.md
           fi
 
           # npx changelogithub
