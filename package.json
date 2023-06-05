@@ -7,7 +7,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.6.1",
     "@commitlint/config-conventional": "17.6.1",
-    "@ls-lint/ls-lint": "1.11.2",
+    "@ls-lint/ls-lint": "2.0.0",
     "@types/chai": "4.3.5",
     "@types/mocha": "10.0.1",
     "@types/node": "18.16.3",
