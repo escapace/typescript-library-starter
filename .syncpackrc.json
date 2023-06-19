@@ -1,4 +1,14 @@
 {
+  "dependencyTypes": [
+    "dev",
+    "overrides",
+    "peer",
+    "pnpmOverrides",
+    "prod",
+    "resolutions",
+    "workspace",
+    "engines"
+  ],
   "customTypes": {
     "engines": {
       "path": "engines",
