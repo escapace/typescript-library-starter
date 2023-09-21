@@ -6,7 +6,7 @@
     "pnpmOverrides",
     "prod",
     "resolutions",
-    "workspace",
+    "local",
     "engines"
   ],
   "customTypes": {
