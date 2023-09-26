@@ -58,7 +58,7 @@
   "publishConfig": {
     "provenance": true
   },
-  "repository": "escapace/typescript-library-starter.git",
+  "repository": "escapace/typescript-library-starter",
   "scripts": {
     "build": "node ./scripts/build.mjs",
     "lint": "ls-lint && eslint 'src/**/*.{js,mjs,cjs,ts,mts,cts}'",
