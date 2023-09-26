@@ -1,13 +1,13 @@
 {
   "dependencyTypes": [
     "dev",
+    "engines",
+    "local",
     "overrides",
     "peer",
     "pnpmOverrides",
     "prod",
-    "resolutions",
-    "local",
-    "engines"
+    "resolutions"
   ],
   "customTypes": {
     "engines": {
