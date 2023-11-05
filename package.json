@@ -8,8 +8,8 @@
   },
   "bugs": "https://github.com/escapace/typescript-library-starter/issues",
   "devDependencies": {
-    "@commitlint/cli": "17.8.1",
-    "@commitlint/config-conventional": "17.8.1",
+    "@commitlint/cli": "18.2.0",
+    "@commitlint/config-conventional": "18.1.0",
     "@ls-lint/ls-lint": "2.2.2",
     "@types/chai": "4.3.9",
     "@types/mocha": "10.0.3",
