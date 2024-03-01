@@ -15,7 +15,7 @@ jobs:
         shell: bash
         run: |
           echo "value=${GITHUB_REPOSITORY#*/}" >> $GITHUB_OUTPUT
-      - uses: actions/delete-package-versions@v4
+      - uses: actions/delete-package-versions@v5
         with:
           package-name: ${{ steps.name.outputs.value }}
           package-type: 'npm'
