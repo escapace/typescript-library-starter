@@ -23,6 +23,8 @@ jobs:
       node-version: ${{ needs.context.outputs.node-version }}
       pnpm-version: ${{ needs.context.outputs.pnpm-version }}
       version: ${{ needs.context.outputs.version }}
+    secrets:
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
   release:
     if: needs.context.outputs.environment == 'production'
     runs-on: ubuntu-latest
