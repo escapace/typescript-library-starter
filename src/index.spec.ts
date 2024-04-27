@@ -1,5 +1,5 @@
+import { assert, describe, it } from 'vitest'
 import { hello } from './index.js'
-import { assert } from 'chai'
 
 describe('./src/index.spec.ts', () => {
   it('hello', async () => {
