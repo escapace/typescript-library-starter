@@ -23,5 +23,5 @@
     "typeRoots": ["node_modules/@types"],
     "useDefineForClassFields": true
   },
-  "include": ["src"]
+  "exclude": ["lib"]
 }
