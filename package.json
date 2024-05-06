@@ -14,7 +14,7 @@
     "@ls-lint/ls-lint": "2.2.3",
     "@vitest/coverage-v8": "1.5.2",
     "eslint": "9.1.1",
-    "eslint-config-escapace": "5.0.5",
+    "eslint-config-escapace": "5.0.6",
     "knip": "5.11.0",
     "lefthook": "1.6.10",
     "prettier": "3.2.5",

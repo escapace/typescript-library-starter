@@ -27,8 +27,8 @@ importers:
         specifier: 9.1.1
         version: 9.1.1
       eslint-config-escapace:
-        specifier: 5.0.5
-        version: 5.0.5(eslint@9.1.1)(typescript@5.4.5)
+        specifier: 5.0.6
+        version: 5.0.6(eslint@9.1.1)(typescript@5.4.5)
       knip:
         specifier: 5.11.0
         version: 5.11.0(@types/node@20.12.7)(typescript@5.4.5)
@@ -1253,8 +1253,8 @@ packages:
     peerDependencies:
       eslint: '>=6.0.0'
 
-  eslint-config-escapace@5.0.5:
-    resolution: {integrity: sha512-sqyQKzT7DTcZNEg/9TUJpN9V0UNxvKQ54tAZnCMjlm6HhDi7WVjEhhrnyubNPAPk0rJrklLZ1oQY0Mi8rhOEbQ==}
+  eslint-config-escapace@5.0.6:
+    resolution: {integrity: sha512-+Aq5VBehH3NT1lK+w/oqE0YOED2nKzqx33GrF7GdfCe+Mebh8EOCDFjBWPHkF+PoE+rpXVV2GsHCQJDbMkxsPA==}
     engines: {node: '>=20.12.0', pnpm: '>=9.0.6'}
     peerDependencies:
       eslint: '>=9.1.1'
@@ -4040,7 +4040,7 @@ snapshots:
       eslint: 9.1.1
       semver: 7.6.0
 
-  eslint-config-escapace@5.0.5(eslint@9.1.1)(typescript@5.4.5):
+  eslint-config-escapace@5.0.6(eslint@9.1.1)(typescript@5.4.5):
     dependencies:
       '@stylistic/eslint-plugin': 1.7.2(eslint@9.1.1)(typescript@5.4.5)
       eslint: 9.1.1
