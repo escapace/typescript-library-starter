@@ -1059,8 +1059,8 @@ packages:
   caniuse-lite@1.0.30001642:
     resolution: {integrity: sha512-3XQ0DoRgLijXJErLSl+bLnJ+Et4KqV1PY6JJBGAFlsNsz31zeAIncyeZfLCabHK/jtSh+671RM9YMldxjUPZtA==}
 
-  chai@4.4.1:
-    resolution: {integrity: sha512-13sOfMv2+DWduEU+/xbun3LScLoqN17nBeTLUsmDfKdoiC1fr0n9PU4guu4AhRcOVFk/sW8LyZWHuhWtQZiF+g==}
+  chai@4.5.0:
+    resolution: {integrity: sha512-RITGBfijLkBddZvnn8jdqoTypxvqbOLYQkGGxXzeFjVHvudaPw0HNFD9x928/eUwYWd2dPCugVqspGALTZZQKw==}
     engines: {node: '>=4'}
 
   chalk-template@1.1.0:
@@ -2762,8 +2762,8 @@ packages:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
 
-  type-detect@4.0.8:
-    resolution: {integrity: sha512-0fr/mIH1dlO+x7TlcMy+bIDqKPsw/70tVyeHW787goQjhmqaZe10uwLujubK9q9Lg6Fiho1KUKDYz0Z7k7g5/g==}
+  type-detect@4.1.0:
+    resolution: {integrity: sha512-Acylog8/luQ8L7il+geoSxhEkazvkslg7PSNKOX59mbB9cOveP5aq9h74Y7YU8yDpJwetzQQrfIwtf4Wp4LKcw==}
     engines: {node: '>=4'}
 
   type-fest@0.20.2:
@@ -3860,7 +3860,7 @@ snapshots:
     dependencies:
       '@vitest/spy': 1.6.0
       '@vitest/utils': 1.6.0
-      chai: 4.4.1
+      chai: 4.5.0
 
   '@vitest/runner@1.6.0':
     dependencies:
@@ -4035,7 +4035,7 @@ snapshots:
 
   caniuse-lite@1.0.30001642: {}
 
-  chai@4.4.1:
+  chai@4.5.0:
     dependencies:
       assertion-error: 1.1.0
       check-error: 1.0.3
@@ -4043,7 +4043,7 @@ snapshots:
       get-func-name: 2.0.2
       loupe: 2.3.7
       pathval: 1.1.1
-      type-detect: 4.0.8
+      type-detect: 4.1.0
 
   chalk-template@1.1.0:
     dependencies:
@@ -4196,7 +4196,7 @@ snapshots:
 
   deep-eql@4.1.4:
     dependencies:
-      type-detect: 4.0.8
+      type-detect: 4.1.0
 
   deep-is@0.1.4: {}
 
@@ -5782,7 +5782,7 @@ snapshots:
     dependencies:
       prelude-ls: 1.2.1
 
-  type-detect@4.0.8: {}
+  type-detect@4.1.0: {}
 
   type-fest@0.20.2: {}
 
@@ -5875,7 +5875,7 @@ snapshots:
       '@vitest/spy': 1.6.0
       '@vitest/utils': 1.6.0
       acorn-walk: 8.3.3
-      chai: 4.4.1
+      chai: 4.5.0
       debug: 4.3.5
       execa: 8.0.1
       local-pkg: 0.5.0
