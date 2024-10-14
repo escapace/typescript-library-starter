@@ -17,7 +17,7 @@
     "eslint": "9.6.0",
     "eslint-config-escapace": "5.2.2",
     "esroll": "0.2.0",
-    "jsdom": "24.1.1",
+    "jsdom": "25.0.1",
     "knip": "5.27.0",
     "lefthook": "1.7.7",
     "prettier": "3.3.3",
