@@ -22,7 +22,7 @@
     "lefthook": "1.7.7",
     "prettier": "3.3.3",
     "prettier-config-escapace": "1.2.1",
-    "syncpack": "12.4.0",
+    "syncpack": "13.0.0",
     "tsx": "4.16.2",
     "typescript": "5.5.4",
     "vitest": "2.0.4"
