@@ -2,16 +2,18 @@
   "builds": {
     "browser": {
       "define": {
+        "__ENVIRONMENT__": "\"production\"",
         "__PLATFORM__": "\"browser\""
       },
       "entryPoints": ["src/index.ts"],
       "mainFields": ["module", "browser", "main"],
       "outdir": "lib/browser",
       "platform": "browser",
-      "target": ["chrome123", "firefox124", "edge122", "opera108", "safari17.3"]
+      "target": ["chrome128", "firefox130", "edge128", "opera113", "safari17.6"]
     },
     "node": {
       "define": {
+        "__ENVIRONMENT__": "\"production\"",
         "__PLATFORM__": "\"node\""
       },
       "entryPoints": ["src/index.ts"],
