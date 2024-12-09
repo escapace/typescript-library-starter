@@ -10,7 +10,7 @@
   "devDependencies": {
     "@commitlint/cli": "19.6.0",
     "@commitlint/config-conventional": "19.6.0",
-    "@escapace/pnpm-pack": "0.5.2",
+    "@escapace/pnpm-pack": "0.5.3",
     "@ls-lint/ls-lint": "2.2.3",
     "@types/node": "22.10.1",
     "@vitest/coverage-v8": "2.1.6",
