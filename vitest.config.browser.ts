@@ -17,7 +17,7 @@ export default mergeConfig(
     },
     test: {
       environment: 'jsdom',
-      include: ['{src,tests}/**/+([a-zA-Z0-9-])?(.browser).{test,spec}.?(c|m)[jt]s?(x)'],
+      include: ['{src,test}/**/+([a-zA-Z0-9-])?(.browser).{test,spec}.?(c|m)[jt]s?(x)'],
       name: 'browser',
       sequence: {
         hooks: 'list',
