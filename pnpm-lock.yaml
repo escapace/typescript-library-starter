@@ -24,8 +24,8 @@ importers:
         specifier: 22.10.1
         version: 22.10.1
       '@vitest/coverage-v8':
-        specifier: 2.1.6
-        version: 2.1.6(vitest@2.1.6(@types/node@22.10.1)(jsdom@25.0.1))
+        specifier: 2.1.8
+        version: 2.1.8(vitest@2.1.8(@types/node@22.10.1)(jsdom@25.0.1))
       eslint:
         specifier: 9.16.0
         version: 9.16.0(jiti@2.4.0)
@@ -39,14 +39,14 @@ importers:
         specifier: 25.0.1
         version: 25.0.1
       knip:
-        specifier: 5.38.2
-        version: 5.38.2(@types/node@22.10.1)(typescript@5.7.2)
+        specifier: 5.39.2
+        version: 5.39.2(@types/node@22.10.1)(typescript@5.7.2)
       lefthook:
-        specifier: 1.8.4
-        version: 1.8.4
+        specifier: 1.9.0
+        version: 1.9.0
       prettier:
-        specifier: 3.4.1
-        version: 3.4.1
+        specifier: 3.4.2
+        version: 3.4.2
       prettier-config-escapace:
         specifier: 1.2.1
         version: 1.2.1
@@ -60,8 +60,8 @@ importers:
         specifier: 5.7.2
         version: 5.7.2
       vitest:
-        specifier: 2.1.6
-        version: 2.1.6(@types/node@22.10.1)(jsdom@25.0.1)
+        specifier: 2.1.8
+        version: 2.1.8(@types/node@22.10.1)(jsdom@25.0.1)
 
 packages:
 
@@ -689,6 +689,7 @@ packages:
 
   '@ls-lint/ls-lint@2.2.3':
     resolution: {integrity: sha512-ekM12jNm/7O2I/hsRv9HvYkRdfrHpiV1epVuI2NP+eTIcEgdIdKkKCs9KgQydu/8R5YXTov9aHdOgplmCHLupw==}
+    cpu: [x64, arm64, s390x]
     os: [darwin, linux, win32]
     hasBin: true
 
@@ -1023,43 +1024,43 @@ packages:
     resolution: {integrity: sha512-1Hm7THLpO6ww5QU6H/Qp+AusUUl+z/CAm3cNZZ0jQvon9yicgO7Rwd+/WWRpMKLYV6p2UvdbR27c86rzCPpreg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@vitest/coverage-v8@2.1.6':
-    resolution: {integrity: sha512-qItJVYDbG3MUFO68dOZUz+rWlqe9LMzotERXFXKg25s2A/kSVsyS9O0yNGrITfBd943GsnBeQZkBUu7Pc+zVeA==}
+  '@vitest/coverage-v8@2.1.8':
+    resolution: {integrity: sha512-2Y7BPlKH18mAZYAW1tYByudlCYrQyl5RGvnnDYJKW5tCiO5qg3KSAy3XAxcxKz900a0ZXxWtKrMuZLe3lKBpJw==}
     peerDependencies:
-      '@vitest/browser': 2.1.6
-      vitest: 2.1.6
+      '@vitest/browser': 2.1.8
+      vitest: 2.1.8
     peerDependenciesMeta:
       '@vitest/browser':
         optional: true
 
-  '@vitest/expect@2.1.6':
-    resolution: {integrity: sha512-9M1UR9CAmrhJOMoSwVnPh2rELPKhYo0m/CSgqw9PyStpxtkwhmdM6XYlXGKeYyERY1N6EIuzkQ7e3Lm1WKCoUg==}
+  '@vitest/expect@2.1.8':
+    resolution: {integrity: sha512-8ytZ/fFHq2g4PJVAtDX57mayemKgDR6X3Oa2Foro+EygiOJHUXhCqBAAKQYYajZpFoIfvBCF1j6R6IYRSIUFuw==}
 
-  '@vitest/mocker@2.1.6':
-    resolution: {integrity: sha512-MHZp2Z+Q/A3am5oD4WSH04f9B0T7UvwEb+v5W0kCYMhtXGYbdyl2NUk1wdSMqGthmhpiThPDp/hEoVwu16+u1A==}
+  '@vitest/mocker@2.1.8':
+    resolution: {integrity: sha512-7guJ/47I6uqfttp33mgo6ga5Gr1VnL58rcqYKyShoRK9ebu8T5Rs6HN3s1NABiBeVTdWNrwUMcHH54uXZBN4zA==}
     peerDependencies:
       msw: ^2.4.9
-      vite: ^5.0.0 || ^6.0.0
+      vite: ^5.0.0
     peerDependenciesMeta:
       msw:
         optional: true
       vite:
         optional: true
 
-  '@vitest/pretty-format@2.1.6':
-    resolution: {integrity: sha512-exZyLcEnHgDMKc54TtHca4McV4sKT+NKAe9ix/yhd/qkYb/TP8HTyXRFDijV19qKqTZM0hPL4753zU/U8L/gAA==}
+  '@vitest/pretty-format@2.1.8':
+    resolution: {integrity: sha512-9HiSZ9zpqNLKlbIDRWOnAWqgcA7xu+8YxXSekhr0Ykab7PAYFkhkwoqVArPOtJhPmYeE2YHgKZlj3CP36z2AJQ==}
 
-  '@vitest/runner@2.1.6':
-    resolution: {integrity: sha512-SjkRGSFyrA82m5nz7To4CkRSEVWn/rwQISHoia/DB8c6IHIhaE/UNAo+7UfeaeJRE979XceGl00LNkIz09RFsA==}
+  '@vitest/runner@2.1.8':
+    resolution: {integrity: sha512-17ub8vQstRnRlIU5k50bG+QOMLHRhYPAna5tw8tYbj+jzjcspnwnwtPtiOlkuKC4+ixDPTuLZiqiWWQ2PSXHVg==}
 
-  '@vitest/snapshot@2.1.6':
-    resolution: {integrity: sha512-5JTWHw8iS9l3v4/VSuthCndw1lN/hpPB+mlgn1BUhFbobeIUj1J1V/Bj2t2ovGEmkXLTckFjQddsxS5T6LuVWw==}
+  '@vitest/snapshot@2.1.8':
+    resolution: {integrity: sha512-20T7xRFbmnkfcmgVEz+z3AU/3b0cEzZOt/zmnvZEctg64/QZbSDJEVm9fLnnlSi74KibmRsO9/Qabi+t0vCRPg==}
 
-  '@vitest/spy@2.1.6':
-    resolution: {integrity: sha512-oTFObV8bd4SDdRka5O+mSh5w9irgx5IetrD5i+OsUUsk/shsBoHifwCzy45SAORzAhtNiprUVaK3hSCCzZh1jQ==}
+  '@vitest/spy@2.1.8':
+    resolution: {integrity: sha512-5swjf2q95gXeYPevtW0BLk6H8+bPlMb4Vw/9Em4hFxDcaOxS+e0LOX4yqNxoHzMR2akEB2xfpnWUzkZokmgWDg==}
 
-  '@vitest/utils@2.1.6':
-    resolution: {integrity: sha512-ixNkFy3k4vokOUTU2blIUvOgKq/N2PW8vKIjZZYsGJCMX69MRa9J2sKqX5hY/k5O5Gty3YJChepkqZ3KM9LyIQ==}
+  '@vitest/utils@2.1.8':
+    resolution: {integrity: sha512-dwSoui6djdwbfFmIgbIjX2ZhIoG7Ex/+xpxyiEgIGzjliY8xGkcpITKTlp6B4MgtGkF2ilvm97cPM96XZaAgcA==}
 
   '@zkochan/js-yaml@0.0.7':
     resolution: {integrity: sha512-nrUSn7hzt7J6JWgWGz78ZYI8wj+gdIJdk0Ynjpp8l+trkn58Uqsf6RYrYkEK+3X18EX+TNdtJI0WxAtc+L84SQ==}
@@ -2020,66 +2021,66 @@ packages:
     resolution: {integrity: sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==}
     engines: {node: '>=6'}
 
-  knip@5.38.2:
-    resolution: {integrity: sha512-gVduAQa80bar/uKtQDvOCBzTApdjqiz8e9eDIdRkYFyTAQM/DriWLi2vv/2AlzMcPYeSWddLptBdgN4whGzFtg==}
+  knip@5.39.2:
+    resolution: {integrity: sha512-BuvuWRllLWV/r2G4m9ggNH+DZ6gouP/dhtJPXVlMbWNF++w9/EfrF6k2g7YBKCwjzCC+PXmYtpH8S2t8RjnY4Q==}
     engines: {node: '>=18.6.0'}
     hasBin: true
     peerDependencies:
       '@types/node': '>=18'
       typescript: '>=5.0.4'
 
-  lefthook-darwin-arm64@1.8.4:
-    resolution: {integrity: sha512-OS5MsU0gvd8LYSpuQCHtmDUqwNrJ/LjCO0LGC1wNepY4OkuVl9DfX+rQ506CVUQYZiGVcwy2/qPOOBjNzA5+wQ==}
+  lefthook-darwin-arm64@1.9.0:
+    resolution: {integrity: sha512-pClng2uWTqZ/FBC+YK0O4MlvphtMcw3xnYZYP4mOfM56gkSrMdsoG59AkBWB5zwxQymPiNFyO3H+JJbjvwmueA==}
     cpu: [arm64]
     os: [darwin]
 
-  lefthook-darwin-x64@1.8.4:
-    resolution: {integrity: sha512-QLRsqK9aTMRcVW8qz4pzI2OWnGCEcaEPJlIiFjwstYsS+wfkooxOS0UkfVMjy+QoGgEcki+cxF/FoY7lE7DDtw==}
+  lefthook-darwin-x64@1.9.0:
+    resolution: {integrity: sha512-PHQHJZHNadWhFan3Vvy24hMYMecR433t0NHODyBgILaZXOmoeMGcQYNHTmOb+R0148BKA/33l00m1CY14ZPqtw==}
     cpu: [x64]
     os: [darwin]
 
-  lefthook-freebsd-arm64@1.8.4:
-    resolution: {integrity: sha512-chnQ1m/Cmn9c0sLdk5HL2SToE5LBJv5uQMdH1IGRRcw+nEqWqrMnDXvM75caiJAyjmUGvPH3czKTJDzTFV1E+A==}
+  lefthook-freebsd-arm64@1.9.0:
+    resolution: {integrity: sha512-yuPJJJ3aDpMihqg1dfS75XgnzUYh+OqSZPmQp49s9RXKAWUCsBiDcirmrseDRbj3WVsatNGQldbV+5F5rNrxqw==}
     cpu: [arm64]
     os: [freebsd]
 
-  lefthook-freebsd-x64@1.8.4:
-    resolution: {integrity: sha512-KQi+WBUdnGLnK0rHOR58kbMH5TDVN1ZjZLu66Pv9FCG7Y7shR1qtaTXu+wmxdRhMvaLeQIXRsUEPjNRC66yMmA==}
+  lefthook-freebsd-x64@1.9.0:
+    resolution: {integrity: sha512-7By8mNLsc+EFJJkmeuC8tmYO8+i9oLBqDSHqnlzSNMK8EF5DV9DTAyNIHIbn0OIcwcCe6xBfwLZimeSkKxMZKg==}
     cpu: [x64]
     os: [freebsd]
 
-  lefthook-linux-arm64@1.8.4:
-    resolution: {integrity: sha512-CXNcqIskLwTwQARidGdFqmNxpvOU3jsWPK4KA7pq2+QmlWJ64w98ebMvNBoUmRUCXqzmUm7Udf/jpfz2fobewQ==}
+  lefthook-linux-arm64@1.9.0:
+    resolution: {integrity: sha512-MYZD6j+ufryhENqjZe6POD3rT/0LFLfRtK4ddKKEqPGEy5wKpmXjt3ydfqTg6XAFzm6pyQO1zgwPuF40s5r3wQ==}
     cpu: [arm64]
     os: [linux]
 
-  lefthook-linux-x64@1.8.4:
-    resolution: {integrity: sha512-pVNITkFBxUCEtamWSM/res2Gd48+m9YKbNyIBndAuZVC5pKV5aGKZy2DNq6PWUPYiUDPx+7hoAtCJg/tlAiqhw==}
+  lefthook-linux-x64@1.9.0:
+    resolution: {integrity: sha512-xKh5/Lhjn7oI9AmUhtcArS1Y6RjDcxn0KKXAKURhwwZNFI0HGlusIYAF9U86MDqSPbfvEv+nRpq2i6au6Xp6Aw==}
     cpu: [x64]
     os: [linux]
 
-  lefthook-openbsd-arm64@1.8.4:
-    resolution: {integrity: sha512-l+i/Dg5X36kYzhpMGSPE3rMbWy1KSytbLB9lY1PmxYb6LRH6iQTYIoxvLabVUwSBPSq8HtIFa50+bvC5+scfVA==}
+  lefthook-openbsd-arm64@1.9.0:
+    resolution: {integrity: sha512-+3YNG0BVWO3CxBfO5GIDU31EWLZgfPU4M/NDqPekIBf8EUSiToXk9D4MNBAYnjjAfAezV/sdDeLm2Jg4l468UQ==}
     cpu: [arm64]
     os: [openbsd]
 
-  lefthook-openbsd-x64@1.8.4:
-    resolution: {integrity: sha512-CqhDDPPX8oHzMLgNi/Reba823DRzj+eMNWQ8axvSiIG+zmG1w20xZH5QSs/mD3tjrND90yfDd90mWMt181qPyA==}
+  lefthook-openbsd-x64@1.9.0:
+    resolution: {integrity: sha512-7DGR8oAa5N4JJ1s0hpDJMQ7AUAT3bDNcTPCFw2keVlmg29qMdIL4RIEbVau/DZ8GvZhzoOE8ddtgUH07PeUjRw==}
     cpu: [x64]
     os: [openbsd]
 
-  lefthook-windows-arm64@1.8.4:
-    resolution: {integrity: sha512-dvpvorICmVjmw29Aiczg7DcaSzkd86bEBomiGq4UsAEk3+7ExLrlWJDLFsI6xLjMKmTxy+F7eXb2uDtuFC1N4g==}
+  lefthook-windows-arm64@1.9.0:
+    resolution: {integrity: sha512-t7LtUL3eDuprxomtuw74KBLXC+Clk1e/L+ofLy4Jw9t0FNPkFDouQv31IQ0HfS5d1aymNKjK/qbm+IOs1XZC6Q==}
     cpu: [arm64]
     os: [win32]
 
-  lefthook-windows-x64@1.8.4:
-    resolution: {integrity: sha512-e+y8Jt4/7PnoplhOuK48twjGVJEsU4T3J5kxD4mWfl6Cbit0YSn4bme9nW41eqCqTUqOm+ky29XlfnPHFX5ZNA==}
+  lefthook-windows-x64@1.9.0:
+    resolution: {integrity: sha512-q3L6tXUxicqiVbquyUIVuGlZo3fJ2y4HhgjINYVCRR+kdn+yqu5pR7Vre/I+LnWtm6V6CUmoV2rxx1fl/1lP1w==}
     cpu: [x64]
     os: [win32]
 
-  lefthook@1.8.4:
-    resolution: {integrity: sha512-XNyMaTWNRuADOaocYiHidgNkNDz8SCekpdNJ7lqceFcBT2zjumnb28/o7IMaNROpLBZdQkLkJXSeaQWGqn3kog==}
+  lefthook@1.9.0:
+    resolution: {integrity: sha512-JF2J4+IEsWpTL2NRWXqUzNu3Nf0pfxMd+Io3kXm6rTQ04jpwh06f37VB5lc5L76kgxpjiBiuFoRlPOAY2je3YA==}
     hasBin: true
 
   levn@0.4.1:
@@ -2387,8 +2388,8 @@ packages:
   prettier-config-escapace@1.2.1:
     resolution: {integrity: sha512-piOy4gQTfKum5UV8vnjdB3Ap0sCFtaOvTbo956JXOfpzrTONKb+hM5IO9APweRJPRv8cQFcoRD4hLmWSknJ0ng==}
 
-  prettier@3.4.1:
-    resolution: {integrity: sha512-G+YdqtITVZmOJje6QkXQWzl3fSfMxFwm1tjTyo9exhkmWSqC4Yhd1+lug++IlR2mvRVAxEDDWYkQdeSztajqgg==}
+  prettier@3.4.2:
+    resolution: {integrity: sha512-e9MewbtFo+Fevyuxn/4rrcDAaq0IYxPGLvObpQjiZBMAzB9IGmzlnG9RZy3FFas+eBMu2vA0CszMeduow5dIuQ==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -2833,9 +2834,9 @@ packages:
     resolution: {integrity: sha512-OljLrQ9SQdOUqTaQxqL5dEfZWrXExyyWsozYlAWFawPVNuD83igl7uJD2RTkNMbniIYgt8l81eCJGIdQF7avLQ==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
 
-  vite-node@2.1.6:
-    resolution: {integrity: sha512-DBfJY0n9JUwnyLxPSSUmEePT21j8JZp/sR9n+/gBwQU6DcQOioPdb8/pibWfXForbirSagZCilseYIwaL3f95A==}
-    engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
+  vite-node@2.1.8:
+    resolution: {integrity: sha512-uPAwSr57kYjAUux+8E2j0q0Fxpn8M9VoyfGiRI8Kfktz9NcYMCenwY5RnZxnF1WTu3TGiYipirIzacLL3VVGFg==}
+    engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
 
   vite@5.4.11:
@@ -2869,15 +2870,15 @@ packages:
       terser:
         optional: true
 
-  vitest@2.1.6:
-    resolution: {integrity: sha512-isUCkvPL30J4c5O5hgONeFRsDmlw6kzFEdLQHLezmDdKQHy8Ke/B/dgdTMEgU0vm+iZ0TjW8GuK83DiahBoKWQ==}
-    engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
+  vitest@2.1.8:
+    resolution: {integrity: sha512-1vBKTZskHw/aosXqQUlVWWlGUxSJR8YtiyZDJAFeW2kPAeX6S3Sool0mjspO+kXLuxVWlEDDowBAeqeAQefqLQ==}
+    engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
       '@edge-runtime/vm': '*'
-      '@types/node': ^18.0.0 || ^20.0.0 || >=22.0.0
-      '@vitest/browser': 2.1.6
-      '@vitest/ui': 2.1.6
+      '@types/node': ^18.0.0 || >=20.0.0
+      '@vitest/browser': 2.1.8
+      '@vitest/ui': 2.1.8
       happy-dom: '*'
       jsdom: '*'
     peerDependenciesMeta:
@@ -3859,7 +3860,7 @@ snapshots:
       '@typescript-eslint/types': 8.17.0
       eslint-visitor-keys: 4.2.0
 
-  '@vitest/coverage-v8@2.1.6(vitest@2.1.6(@types/node@22.10.1)(jsdom@25.0.1))':
+  '@vitest/coverage-v8@2.1.8(vitest@2.1.8(@types/node@22.10.1)(jsdom@25.0.1))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@bcoe/v8-coverage': 0.2.3
@@ -3873,47 +3874,47 @@ snapshots:
       std-env: 3.8.0
       test-exclude: 7.0.1
       tinyrainbow: 1.2.0
-      vitest: 2.1.6(@types/node@22.10.1)(jsdom@25.0.1)
+      vitest: 2.1.8(@types/node@22.10.1)(jsdom@25.0.1)
     transitivePeerDependencies:
       - supports-color
 
-  '@vitest/expect@2.1.6':
+  '@vitest/expect@2.1.8':
     dependencies:
-      '@vitest/spy': 2.1.6
-      '@vitest/utils': 2.1.6
+      '@vitest/spy': 2.1.8
+      '@vitest/utils': 2.1.8
       chai: 5.1.2
       tinyrainbow: 1.2.0
 
-  '@vitest/mocker@2.1.6(vite@5.4.11(@types/node@22.10.1))':
+  '@vitest/mocker@2.1.8(vite@5.4.11(@types/node@22.10.1))':
     dependencies:
-      '@vitest/spy': 2.1.6
+      '@vitest/spy': 2.1.8
       estree-walker: 3.0.3
       magic-string: 0.30.12
     optionalDependencies:
       vite: 5.4.11(@types/node@22.10.1)
 
-  '@vitest/pretty-format@2.1.6':
+  '@vitest/pretty-format@2.1.8':
     dependencies:
       tinyrainbow: 1.2.0
 
-  '@vitest/runner@2.1.6':
+  '@vitest/runner@2.1.8':
     dependencies:
-      '@vitest/utils': 2.1.6
+      '@vitest/utils': 2.1.8
       pathe: 1.1.2
 
-  '@vitest/snapshot@2.1.6':
+  '@vitest/snapshot@2.1.8':
     dependencies:
-      '@vitest/pretty-format': 2.1.6
+      '@vitest/pretty-format': 2.1.8
       magic-string: 0.30.12
       pathe: 1.1.2
 
-  '@vitest/spy@2.1.6':
+  '@vitest/spy@2.1.8':
     dependencies:
       tinyspy: 3.0.2
 
-  '@vitest/utils@2.1.6':
+  '@vitest/utils@2.1.8':
     dependencies:
-      '@vitest/pretty-format': 2.1.6
+      '@vitest/pretty-format': 2.1.8
       loupe: 3.1.2
       tinyrainbow: 1.2.0
 
@@ -4995,7 +4996,7 @@ snapshots:
 
   kleur@3.0.3: {}
 
-  knip@5.38.2(@types/node@22.10.1)(typescript@5.7.2):
+  knip@5.39.2(@types/node@22.10.1)(typescript@5.7.2):
     dependencies:
       '@nodelib/fs.walk': 1.2.8
       '@snyk/github-codeowners': 1.1.0
@@ -5016,48 +5017,48 @@ snapshots:
       zod: 3.23.8
       zod-validation-error: 3.4.0(zod@3.23.8)
 
-  lefthook-darwin-arm64@1.8.4:
+  lefthook-darwin-arm64@1.9.0:
     optional: true
 
-  lefthook-darwin-x64@1.8.4:
+  lefthook-darwin-x64@1.9.0:
     optional: true
 
-  lefthook-freebsd-arm64@1.8.4:
+  lefthook-freebsd-arm64@1.9.0:
     optional: true
 
-  lefthook-freebsd-x64@1.8.4:
+  lefthook-freebsd-x64@1.9.0:
     optional: true
 
-  lefthook-linux-arm64@1.8.4:
+  lefthook-linux-arm64@1.9.0:
     optional: true
 
-  lefthook-linux-x64@1.8.4:
+  lefthook-linux-x64@1.9.0:
     optional: true
 
-  lefthook-openbsd-arm64@1.8.4:
+  lefthook-openbsd-arm64@1.9.0:
     optional: true
 
-  lefthook-openbsd-x64@1.8.4:
+  lefthook-openbsd-x64@1.9.0:
     optional: true
 
-  lefthook-windows-arm64@1.8.4:
+  lefthook-windows-arm64@1.9.0:
     optional: true
 
-  lefthook-windows-x64@1.8.4:
+  lefthook-windows-x64@1.9.0:
     optional: true
 
-  lefthook@1.8.4:
+  lefthook@1.9.0:
     optionalDependencies:
-      lefthook-darwin-arm64: 1.8.4
-      lefthook-darwin-x64: 1.8.4
-      lefthook-freebsd-arm64: 1.8.4
-      lefthook-freebsd-x64: 1.8.4
-      lefthook-linux-arm64: 1.8.4
-      lefthook-linux-x64: 1.8.4
-      lefthook-openbsd-arm64: 1.8.4
-      lefthook-openbsd-x64: 1.8.4
-      lefthook-windows-arm64: 1.8.4
-      lefthook-windows-x64: 1.8.4
+      lefthook-darwin-arm64: 1.9.0
+      lefthook-darwin-x64: 1.9.0
+      lefthook-freebsd-arm64: 1.9.0
+      lefthook-freebsd-x64: 1.9.0
+      lefthook-linux-arm64: 1.9.0
+      lefthook-linux-x64: 1.9.0
+      lefthook-openbsd-arm64: 1.9.0
+      lefthook-openbsd-x64: 1.9.0
+      lefthook-windows-arm64: 1.9.0
+      lefthook-windows-x64: 1.9.0
 
   levn@0.4.1:
     dependencies:
@@ -5333,7 +5334,7 @@ snapshots:
 
   prettier-config-escapace@1.2.1: {}
 
-  prettier@3.4.1: {}
+  prettier@3.4.2: {}
 
   pretty-bytes@6.1.1: {}
 
@@ -5747,7 +5748,7 @@ snapshots:
 
   validate-npm-package-name@5.0.1: {}
 
-  vite-node@2.1.6(@types/node@22.10.1):
+  vite-node@2.1.8(@types/node@22.10.1):
     dependencies:
       cac: 6.7.14
       debug: 4.3.7
@@ -5774,15 +5775,15 @@ snapshots:
       '@types/node': 22.10.1
       fsevents: 2.3.3
 
-  vitest@2.1.6(@types/node@22.10.1)(jsdom@25.0.1):
+  vitest@2.1.8(@types/node@22.10.1)(jsdom@25.0.1):
     dependencies:
-      '@vitest/expect': 2.1.6
-      '@vitest/mocker': 2.1.6(vite@5.4.11(@types/node@22.10.1))
-      '@vitest/pretty-format': 2.1.6
-      '@vitest/runner': 2.1.6
-      '@vitest/snapshot': 2.1.6
-      '@vitest/spy': 2.1.6
-      '@vitest/utils': 2.1.6
+      '@vitest/expect': 2.1.8
+      '@vitest/mocker': 2.1.8(vite@5.4.11(@types/node@22.10.1))
+      '@vitest/pretty-format': 2.1.8
+      '@vitest/runner': 2.1.8
+      '@vitest/snapshot': 2.1.8
+      '@vitest/spy': 2.1.8
+      '@vitest/utils': 2.1.8
       chai: 5.1.2
       debug: 4.3.7
       expect-type: 1.1.0
@@ -5794,7 +5795,7 @@ snapshots:
       tinypool: 1.0.2
       tinyrainbow: 1.2.0
       vite: 5.4.11(@types/node@22.10.1)
-      vite-node: 2.1.6(@types/node@22.10.1)
+      vite-node: 2.1.8(@types/node@22.10.1)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 22.10.1
