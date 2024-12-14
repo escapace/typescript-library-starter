@@ -14,8 +14,8 @@
     "@ls-lint/ls-lint": "2.2.3",
     "@types/node": "22.10.1",
     "@vitest/coverage-v8": "2.1.6",
-    "eslint": "9.15.0",
-    "eslint-config-escapace": "5.3.1",
+    "eslint": "9.16.0",
+    "eslint-config-escapace": "5.4.0",
     "esroll": "0.3.0",
     "jsdom": "25.0.1",
     "knip": "5.38.2",
@@ -28,8 +28,8 @@
     "vitest": "2.1.6"
   },
   "engines": {
-    "node": ">=20.15.0",
-    "pnpm": ">=9.11.0"
+    "node": ">=22.11.0",
+    "pnpm": ">=9.14.4"
   },
   "exports": {
     ".": {
