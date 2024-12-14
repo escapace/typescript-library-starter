@@ -27,7 +27,7 @@ jobs:
   context:
     uses: escapace/workflows/.github/workflows/context.yaml@trunk
 
-  ci:
+  ci-typescript:
     needs:
       - context
     secrets:
