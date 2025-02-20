@@ -60,6 +60,12 @@
   ],
   "homepage": "https://github.com/escapace/typescript-library-starter#readme",
   "license": "MPL-2.0",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "lefthook",
+      "esbuild"
+    ]
+  },
   "private": false,
   "publishConfig": {
     "access": "public",
