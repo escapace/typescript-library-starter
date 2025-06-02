@@ -16,7 +16,7 @@
     "@vitest/coverage-v8": "3.1.4",
     "eslint": "9.27.0",
     "eslint-config-escapace": "5.6.0",
-    "esroll": "0.4.3",
+    "esroll": "0.4.4",
     "jsdom": "26.1.0",
     "knip": "5.57.1",
     "lefthook": "1.11.13",
