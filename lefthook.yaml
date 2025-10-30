@@ -40,14 +40,18 @@ pre-commit:
       stage_fixed: true
 
     eslint:
-      exclude: '(^|/)(pnpm-lock\.yaml)$'
+      exclude:
+        - pnpm-lock.yaml
+        - vendor/**
       glob: '*.{js,mjs,cjs,ts,mts,cts,yml,yaml,json,toml}'
       priority: 4
       run: pnpm exec eslint --no-warn-ignored --fix {staged_files}
       stage_fixed: true
 
     prettier:
-      exclude: '(^|/)(pnpm-lock\.yaml)$'
+      exclude:
+        - pnpm-lock.yaml
+        - vendor/**
       glob: '*.{js,mjs,cjs,ts,mts,cts,yml,yaml,json,md}'
       priority: 5
       run: pnpm exec prettier --write {staged_files}

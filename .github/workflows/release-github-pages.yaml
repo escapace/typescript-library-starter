@@ -1,0 +1,34 @@
+name: release-github-pages
+
+on:
+  workflow_dispatch:
+
+env:
+  # 7 GiB by default on GitHub, setting to 6 GiB
+  # https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources
+  NODE_OPTIONS: --max-old-space-size=6144
+
+jobs:
+  context:
+    uses: escapace/workflows/.github/workflows/context.yaml@trunk
+
+  ci-typescript:
+    needs:
+      - context
+    uses: escapace/workflows/.github/workflows/ci-typescript.yaml@trunk
+    with:
+      enable-artifact-upload: false
+      enable-codecov: false
+      enable-github-pages: ${{ fromJSON(needs.context.outputs.github-pages) }}
+      github-pages-path: ${{ needs.context.outputs.github-pages-path }}
+      node-version: ${{ needs.context.outputs.node-version }}
+      pnpm-version: ${{ needs.context.outputs.pnpm-version }}
+      ref: ${{ needs.context.outputs.ref }}
+      version: ${{ needs.context.outputs.version }}
+
+  release-github-pages:
+    if: needs.context.outputs.github-pages
+    needs:
+      - context
+      - ci-typescript
+    uses: escapace/workflows/.github/workflows/release-github-pages.yaml@trunk

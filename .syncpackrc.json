@@ -17,22 +17,28 @@
   ],
   "semverGroups": [
     {
-      "dependencies": ["**"],
-      "dependencyTypes": ["engines", "peer"],
+      "dependencies": ["browserslist"],
+      "dependencyTypes": ["peer"],
       "packages": ["**"],
       "range": ">="
+    },
+    {
+      "dependencies": ["**"],
+      "dependencyTypes": ["engines"],
+      "packages": ["**"],
+      "range": ">="
+    },
+    {
+      "dependencies": ["**"],
+      "dependencyTypes": ["peer", "prod"],
+      "packages": ["**"],
+      "range": "^"
     },
     {
       "dependencies": ["**"],
       "dependencyTypes": ["dev"],
       "packages": ["**"],
       "range": ""
-    },
-    {
-      "dependencies": ["**"],
-      "dependencyTypes": ["prod"],
-      "packages": ["**"],
-      "range": "^"
     }
   ],
   "source": ["package.json", "packages/*/package.json"],

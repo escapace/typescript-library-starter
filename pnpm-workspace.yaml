@@ -1,0 +1,9 @@
+minimumReleaseAge: 10080
+minimumReleaseAgeExclude:
+  - esroll
+  - typescript
+  - '@types/node'
+
+onlyBuiltDependencies:
+  - esbuild
+  - lefthook

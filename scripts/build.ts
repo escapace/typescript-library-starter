@@ -1,9 +1,6 @@
 import { build, type BuildOptions } from 'esroll'
-import { exec as _exec } from 'node:child_process'
 import { readFile } from 'node:fs/promises'
 import path from 'node:path'
-import { promisify } from 'node:util'
-const exec = promisify(_exec)
 
 const dirname = path.resolve(import.meta.dirname, '../')
 process.chdir(dirname)
@@ -22,21 +19,22 @@ const constants = JSON.parse(
 
 for (const value of Object.values(constants.builds)) {
   await build({
-    absWorkingDir: dirname,
-    external: [
-      ...Object.keys(packageJSON.dependencies ?? []),
-      ...Object.keys(packageJSON.peerDependencies ?? []),
-    ],
     sourcemap: true,
     sourcesContent: false,
     splitting: true,
     treeShaking: true,
     tsconfig: 'tsconfig-build.json',
     ...value,
+    absWorkingDir: dirname,
     define: {
       __VERSION__: JSON.stringify(packageJSON.version),
       ...value.define,
     },
+    external: [
+      ...Object.keys(packageJSON.dependencies ?? []),
+      ...Object.keys(packageJSON.peerDependencies ?? []),
+      ...(value.external ?? []),
+    ],
     rollup: {
       experimentalLogSideEffects: true,
       ...value.rollup,
@@ -47,7 +45,3 @@ for (const value of Object.values(constants.builds)) {
     },
   })
 }
-
-await exec(
-  'pnpm exec tsc -p ./tsconfig-build.json --emitDeclarationOnly --declarationDir lib/types',
-)
