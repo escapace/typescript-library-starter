@@ -1,7 +1,11 @@
 version: 2
 
 updates:
-  - directory: '/'
+  - cooldown:
+      default-days: 7
+      include:
+        - '*'
+    directory: '/'
     groups:
       actions:
         update-types:

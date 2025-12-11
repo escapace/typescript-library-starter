@@ -1,9 +1,15 @@
+childConcurrency: 1
 minimumReleaseAge: 10080
 minimumReleaseAgeExclude:
+  - '@types/node'
   - esroll
   - typescript
-  - '@types/node'
-
 onlyBuiltDependencies:
   - esbuild
   - lefthook
+strictDepBuilds: true
+trustPolicy: no-downgrade
+trustPolicyExclude:
+  - eslint
+  - '@eslint/*'
+  - semver

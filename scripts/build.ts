@@ -15,6 +15,7 @@ const constants = JSON.parse(
   await readFile(path.join(import.meta.dirname, 'constants.json'), 'utf-8'),
 ) as {
   builds: Record<string, BuildOptions>
+  declaration?: BuildOptions
 }
 
 for (const value of Object.values(constants.builds)) {
@@ -43,5 +44,12 @@ for (const value of Object.values(constants.builds)) {
       'const-and-let': true,
       ...value.supported,
     },
+  })
+}
+
+if (constants.declaration !== undefined) {
+  await build({
+    declaration: true,
+    ...constants.declaration,
   })
 }

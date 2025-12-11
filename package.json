@@ -13,23 +13,23 @@
     "@escapace/pnpm-pack": "0.6.0",
     "@ls-lint/ls-lint": "2.3.1",
     "@types/node": "24.9.2",
-    "@vitest/coverage-v8": "4.0.2",
-    "eslint": "9.38.0",
-    "eslint-config-escapace": "5.9.3",
+    "@vitest/coverage-v8": "4.0.15",
+    "eslint": "9.39.1",
+    "eslint-config-escapace": "5.10.0",
     "esroll": "1.1.0",
     "jsdom": "27.0.1",
     "knip": "5.66.2",
     "lefthook": "2.0.0",
-    "prettier": "3.6.2",
+    "prettier": "3.7.4",
     "prettier-config-escapace": "1.2.1",
     "syncpack": "13.0.4",
-    "tsx": "4.20.6",
+    "tsx": "4.21.0",
     "typescript": "5.9.3",
-    "vitest": "4.0.2"
+    "vitest": "4.0.15"
   },
   "engines": {
     "node": ">=24.9.0",
-    "pnpm": ">=10.17.1"
+    "pnpm": ">=10.23.0"
   },
   "exports": {
     ".": {
@@ -68,7 +68,7 @@
   "repository": "escapace/typescript-library-starter",
   "scripts": {
     "build": "tsx scripts/build.ts",
-    "format": "syncpack format && eslint --no-warn-ignored --fix && prettier -uw .",
+    "format": "syncpack format && eslint --no-warn-ignored --fix && prettier --no-error-on-unmatched-pattern -uw .",
     "lint": "ls-lint --config .ls-lint.yaml && knip --no-config-hints && eslint",
     "ls-lint": "ls-lint --config .ls-lint.yaml",
     "pack": "pnpm-pack package --pack-destination lib",
