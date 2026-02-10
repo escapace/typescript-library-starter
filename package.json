@@ -8,28 +8,28 @@
   },
   "bugs": "https://github.com/escapace/typescript-library-starter/issues",
   "devDependencies": {
-    "@commitlint/cli": "20.1.0",
-    "@commitlint/config-conventional": "20.0.0",
+    "@commitlint/cli": "20.4.1",
+    "@commitlint/config-conventional": "20.4.1",
     "@escapace/pnpm-pack": "0.6.1",
     "@ls-lint/ls-lint": "2.3.1",
     "@types/node": "24.9.2",
-    "@vitest/coverage-v8": "4.0.15",
+    "@vitest/coverage-v8": "4.0.18",
     "eslint": "9.39.1",
     "eslint-config-escapace": "5.10.1",
     "esroll": "1.1.1",
-    "jsdom": "27.0.1",
+    "jsdom": "28.0.0",
     "knip": "5.66.2",
     "lefthook": "2.0.0",
-    "prettier": "3.7.4",
+    "prettier": "3.8.1",
     "prettier-config-escapace": "1.2.1",
     "syncpack": "13.0.4",
     "tsx": "4.21.0",
     "typescript": "5.9.3",
-    "vitest": "4.0.15"
+    "vitest": "4.0.18"
   },
   "engines": {
-    "node": ">=24.9.0",
-    "pnpm": ">=10.23.0"
+    "node": ">=24.13.0",
+    "pnpm": ">=10.29.2"
   },
   "exports": {
     ".": {

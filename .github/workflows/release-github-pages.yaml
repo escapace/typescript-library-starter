@@ -10,9 +10,14 @@ env:
 
 jobs:
   context:
+    permissions:
+      checks: read
+      contents: read
+      pull-requests: read
+      statuses: read
     uses: escapace/workflows/.github/workflows/context.yaml@trunk
 
-  ci-typescript:
+  continuous-integration:
     needs:
       - context
     uses: escapace/workflows/.github/workflows/ci-typescript.yaml@trunk
@@ -30,5 +35,5 @@ jobs:
     if: needs.context.outputs.github-pages
     needs:
       - context
-      - ci-typescript
+      - continuous-integration
     uses: escapace/workflows/.github/workflows/release-github-pages.yaml@trunk

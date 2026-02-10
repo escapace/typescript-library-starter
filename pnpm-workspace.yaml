@@ -1,8 +1,25 @@
+blockExoticSubdeps: true
 childConcurrency: 1
 minimumReleaseAge: 10080
 minimumReleaseAgeExclude:
+  - '@caslon/*'
+  - '@cassiopeia/*'
+  - '@cepheus/*'
+  - '@escapace/*'
+  - '@pangram/*'
+  - '@pointe/*'
   - '@types/node'
+  - caslon
+  - cassiopeia
+  - cepheus
+  - coastal
+  - eslint-config-escapace
   - esroll
+  - fastify-fetch
+  - pointe
+  - prettier-config-escapace
+  - seedpods
+  - snaproll
   - typescript
 onlyBuiltDependencies:
   - esbuild
@@ -12,4 +29,4 @@ trustPolicy: no-downgrade
 trustPolicyExclude:
   - eslint
   - '@eslint/*'
-  - semver
+  - ts-api-utils@2.3.0
