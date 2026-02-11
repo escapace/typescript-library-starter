@@ -16,7 +16,6 @@ on:
 
 permissions:
   contents: read
-  packages: read
 
 env:
   # 7 GiB by default on GitHub, setting to 6 GiB
@@ -35,6 +34,9 @@ jobs:
   continuous-integration:
     needs:
       - context
+    permissions:
+      contents: read
+      packages: read
     secrets:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
     uses: escapace/workflows/.github/workflows/ci-typescript.yaml@trunk

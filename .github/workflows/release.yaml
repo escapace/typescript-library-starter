@@ -5,6 +5,9 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  contents: read
+
 env:
   # 7 GiB by default on GitHub, setting to 6 GiB
   # https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources
@@ -23,6 +26,9 @@ jobs:
     if: needs.context.outputs.environment == 'production' || needs.context.outputs.environment == 'staging'
     needs:
       - context
+    permissions:
+      contents: read
+      packages: read
     secrets:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
     uses: escapace/workflows/.github/workflows/ci-typescript.yaml@trunk
@@ -41,6 +47,9 @@ jobs:
     needs:
       - context
       - continuous-integration
+    permissions:
+      id-token: write
+      packages: write
     secrets:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     uses: escapace/workflows/.github/workflows/release-typescript.yaml@trunk
@@ -53,6 +62,8 @@ jobs:
       - context
       - continuous-integration
       - release-typescript
+    permissions:
+      contents: write
     uses: escapace/workflows/.github/workflows/release-github.yaml@trunk
     with:
       changelog: ${{ needs.context.outputs.changelog }}
@@ -65,4 +76,8 @@ jobs:
       - context
       - continuous-integration
       - release-typescript
+    permissions:
+      contents: read
+      id-token: write
+      pages: write
     uses: escapace/workflows/.github/workflows/release-github-pages.yaml@trunk

@@ -3,6 +3,9 @@ name: release-github-pages
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 env:
   # 7 GiB by default on GitHub, setting to 6 GiB
   # https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources
@@ -20,6 +23,9 @@ jobs:
   continuous-integration:
     needs:
       - context
+    permissions:
+      contents: read
+      packages: read
     uses: escapace/workflows/.github/workflows/ci-typescript.yaml@trunk
     with:
       enable-artifact-upload: false
@@ -36,4 +42,8 @@ jobs:
     needs:
       - context
       - continuous-integration
+    permissions:
+      contents: read
+      id-token: write
+      pages: write
     uses: escapace/workflows/.github/workflows/release-github-pages.yaml@trunk
