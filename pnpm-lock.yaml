@@ -456,8 +456,8 @@ packages:
     resolution: {integrity: sha512-yzMTt9lEb8Gv7zRioUilSglI0c0smZ9k5D65677DLWLtWJaXIS3CqcGyUFByYKlnUj6TkjLVs54fBl6+TiGQDQ==}
     engines: {node: 20 || >=22}
 
-  '@isaacs/brace-expansion@5.0.0':
-    resolution: {integrity: sha512-ZT55BDLV0yv0RBm2czMiZ+SqCGO7AvmOM3G/w2xhVPH+te0aKgFjmBvGlL1dH+ql2tgGO3MVrbb3jCKyvpgnxA==}
+  '@isaacs/brace-expansion@5.0.1':
+    resolution: {integrity: sha512-WMz71T1JS624nWj2n2fnYAuPovhv7EUhk69R6i9dsVyzxt5eM3bjwvgk9L+APE1TRscGysAVMANkB0jh0LQZrQ==}
     engines: {node: 20 || >=22}
 
   '@jridgewell/resolve-uri@3.1.2':
@@ -479,8 +479,8 @@ packages:
   '@microsoft/api-extractor-model@7.32.2':
     resolution: {integrity: sha512-Ussc25rAalc+4JJs9HNQE7TuO9y6jpYQX9nWD1DhqUzYPBr3Lr7O9intf+ZY8kD5HnIqeIRJX7ccCT0QyBy2Ww==}
 
-  '@microsoft/api-extractor@7.56.0':
-    resolution: {integrity: sha512-H0V69QG5jIb9Ayx35NVBv2lOgFSS3q+Eab2oyGEy0POL3ovYPST+rCNPbwYoczOZXNG8IKjWUmmAMxmDTsXlQA==}
+  '@microsoft/api-extractor@7.56.1':
+    resolution: {integrity: sha512-wX9ugJFqhsEWwt+UFTAkvXcBOzSQ1FeKe0ZdwEDKtjsf20Ec2frmCDXPjQwPtSNrpXUy1yQgyaF6YJVuC8gMtg==}
     hasBin: true
 
   '@microsoft/tsdoc-config@0.18.0':
@@ -912,8 +912,8 @@ packages:
       '@types/node':
         optional: true
 
-  '@rushstack/ts-command-line@5.1.7':
-    resolution: {integrity: sha512-Ugwl6flarZcL2nqH5IXFYk3UR3mBVDsVFlCQW/Oaqidvdb/5Ota6b/Z3JXWIdqV3rOR2/JrYoAHanWF5rgenXA==}
+  '@rushstack/ts-command-line@5.2.0':
+    resolution: {integrity: sha512-lYxCX0nDdkDtCkVpvF0m25ymf66SaMWuppbD6b7MdkIzvGXKBXNIVZlwBH/C0YfkanrupnICWf2n4z3AKSfaHw==}
 
   '@sec-ant/readable-stream@0.4.1':
     resolution: {integrity: sha512-831qok9r2t8AlxLko40y2ebgSDhenenCatLVeW/uBtnHPyhHOvG0C7TvfgecV+wHzIm5KUICgzmVpWS+IMEAeg==}
@@ -1428,8 +1428,8 @@ packages:
     resolution: {integrity: sha512-QM8q3zDe58hqUqjraQOmzZ1LIH9SWQJTlEKCH4kJ2oQvLZk7RbQXvtDM2XEq3fwkV9CCvvH4LA0AV+ogFsBM2Q==}
     engines: {node: '>=8'}
 
-  effect@3.19.15:
-    resolution: {integrity: sha512-vzMmgfZKLcojmUjBdlQx+uaKryO7yULlRxjpDnHdnvcp1NPHxJyoM6IOXBLlzz2I/uPtZpGKavt5hBv7IvGZkA==}
+  effect@3.19.16:
+    resolution: {integrity: sha512-7+XC3vGrbAhCHd8LTFHvnZjRpZKZ8YHRZqJTkpNoxcJ2mCyNs2SwI+6VkV/ij8Y3YW7wfBN4EbU06/F5+m/wkQ==}
 
   electron-to-chromium@1.5.286:
     resolution: {integrity: sha512-9tfDXhJ4RKFNerfjdCcZfufu49vg620741MNs26a9+bhLThdB+plgMeou98CAaHu/WATj2iHOOHTp1hWtABj2A==}
@@ -2794,11 +2794,11 @@ packages:
     resolution: {integrity: sha512-PSkbLUoxOFRzJYjjxHJt9xro7D+iilgMX/C9lawzVuYiIdcihh9DXmVibBe8lmcFrRi/VzlPjBxbN7rH24q8/Q==}
     engines: {node: '>=14.0.0'}
 
-  tldts-core@7.0.21:
-    resolution: {integrity: sha512-oVOMdHvgjqyzUZH1rOESgJP1uNe2bVrfK0jUHHmiM2rpEiRbf3j4BrsIc6JigJRbHGanQwuZv/R+LTcHsw+bLA==}
+  tldts-core@7.0.22:
+    resolution: {integrity: sha512-KgbTDC5wzlL6j/x6np6wCnDSMUq4kucHNm00KXPbfNzmllCmtmvtykJHfmgdHntwIeupW04y8s1N/43S1PkQDw==}
 
-  tldts@7.0.21:
-    resolution: {integrity: sha512-Plu6V8fF/XU6d2k8jPtlQf5F4Xx2hAin4r2C2ca7wR8NK5MbRTo9huLUWRe28f3Uk8bYZfg74tit/dSjc18xnw==}
+  tldts@7.0.22:
+    resolution: {integrity: sha512-nqpKFC53CgopKPjT6Wfb6tpIcZXHcI6G37hesvikhx0EmUGPkZrujRyAjgnmp1SHNgpQfKVanZ+KfpANFt2Hxw==}
     hasBin: true
 
   to-regex-range@5.0.1:
@@ -3451,7 +3451,7 @@ snapshots:
 
   '@isaacs/balanced-match@4.0.1': {}
 
-  '@isaacs/brace-expansion@5.0.0':
+  '@isaacs/brace-expansion@5.0.1':
     dependencies:
       '@isaacs/balanced-match': 4.0.1
 
@@ -3474,7 +3474,7 @@ snapshots:
     transitivePeerDependencies:
       - '@types/node'
 
-  '@microsoft/api-extractor@7.56.0(@types/node@25.2.1)':
+  '@microsoft/api-extractor@7.56.1(@types/node@25.2.1)':
     dependencies:
       '@microsoft/api-extractor-model': 7.32.2(@types/node@25.2.1)
       '@microsoft/tsdoc': 0.16.0
@@ -3482,7 +3482,7 @@ snapshots:
       '@rushstack/node-core-library': 5.19.1(@types/node@25.2.1)
       '@rushstack/rig-package': 0.6.0
       '@rushstack/terminal': 0.21.0(@types/node@25.2.1)
-      '@rushstack/ts-command-line': 5.1.7(@types/node@25.2.1)
+      '@rushstack/ts-command-line': 5.2.0(@types/node@25.2.1)
       diff: 8.0.3
       lodash: 4.17.23
       minimatch: 10.0.3
@@ -3868,7 +3868,7 @@ snapshots:
     optionalDependencies:
       '@types/node': 25.2.1
 
-  '@rushstack/ts-command-line@5.1.7(@types/node@25.2.1)':
+  '@rushstack/ts-command-line@5.2.0(@types/node@25.2.1)':
     dependencies:
       '@rushstack/terminal': 0.21.0(@types/node@25.2.1)
       '@types/argparse': 1.0.38
@@ -3959,8 +3959,8 @@ snapshots:
 
   '@typescript-eslint/project-service@8.46.4(typescript@5.9.3)':
     dependencies:
-      '@typescript-eslint/tsconfig-utils': 8.46.4(typescript@5.9.3)
-      '@typescript-eslint/types': 8.46.4
+      '@typescript-eslint/tsconfig-utils': 8.54.0(typescript@5.9.3)
+      '@typescript-eslint/types': 8.54.0
       debug: 4.4.3
       typescript: 5.9.3
     transitivePeerDependencies:
@@ -4412,7 +4412,7 @@ snapshots:
     dependencies:
       is-obj: 2.0.0
 
-  effect@3.19.15:
+  effect@3.19.16:
     dependencies:
       '@standard-schema/spec': 1.1.0
       fast-check: 3.23.2
@@ -4723,7 +4723,7 @@ snapshots:
 
   esroll@1.1.1(@types/node@25.2.1):
     dependencies:
-      '@microsoft/api-extractor': 7.56.0(@types/node@25.2.1)
+      '@microsoft/api-extractor': 7.56.1(@types/node@25.2.1)
       '@microsoft/api-extractor-model': 7.32.2(@types/node@25.2.1)
       '@microsoft/tsdoc': 0.16.0
       '@rollup/plugin-json': 6.1.0(rollup@4.57.1)
@@ -5514,7 +5514,7 @@ snapshots:
 
   minimatch@10.0.3:
     dependencies:
-      '@isaacs/brace-expansion': 5.0.0
+      '@isaacs/brace-expansion': 5.0.1
 
   minimatch@3.1.2:
     dependencies:
@@ -5963,7 +5963,7 @@ snapshots:
       chalk-template: 1.1.2
       commander: 13.1.0
       cosmiconfig: 9.0.0(typescript@5.9.3)
-      effect: 3.19.15
+      effect: 3.19.16
       enquirer: 2.4.1
       fast-check: 3.23.2
       globby: 14.1.0
@@ -5996,11 +5996,11 @@ snapshots:
 
   tinyrainbow@3.0.3: {}
 
-  tldts-core@7.0.21: {}
+  tldts-core@7.0.22: {}
 
-  tldts@7.0.21:
+  tldts@7.0.22:
     dependencies:
-      tldts-core: 7.0.21
+      tldts-core: 7.0.22
 
   to-regex-range@5.0.1:
     dependencies:
@@ -6012,7 +6012,7 @@ snapshots:
 
   tough-cookie@6.0.0:
     dependencies:
-      tldts: 7.0.21
+      tldts: 7.0.22
 
   tr46@6.0.0:
     dependencies:
