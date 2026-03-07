@@ -16,6 +16,7 @@
   "ignoreBinaries": ["ncu", "taze"],
   "ignoreDependencies": [
     "@commitlint/cli",
+    "@escapace/syncpack-configuration",
     "@microsoft/api-extractor",
     "eslint-config-escapace",
     "prettier",

@@ -20,6 +20,15 @@ minimumReleaseAgeExclude:
   - prettier-config-escapace
   - seedpods
   - snaproll
+  - syncpack
+  - syncpack-darwin-arm64
+  - syncpack-darwin-x64
+  - syncpack-linux-arm64
+  - syncpack-linux-arm64-musl
+  - syncpack-linux-x64
+  - syncpack-linux-x64-musl
+  - syncpack-windows-arm64
+  - syncpack-windows-x64
   - typescript
 onlyBuiltDependencies:
   - esbuild
