@@ -16,7 +16,7 @@
     "@types/node": "25.3.5",
     "@vitest/coverage-v8": "4.1.0",
     "eslint": "9.39.4",
-    "eslint-config-escapace": "5.14.0",
+    "eslint-config-escapace": "5.15.0",
     "esroll": "1.1.5",
     "jsdom": "28.1.0",
     "knip": "5.87.0",
