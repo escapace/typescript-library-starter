@@ -14,7 +14,7 @@
     "@escapace/syncpack-configuration": "0.1.0",
     "@ls-lint/ls-lint": "2.3.1",
     "@types/node": "25.3.5",
-    "@vitest/coverage-v8": "4.1.0",
+    "@vitest/coverage-v8": "4.1.1",
     "eslint": "9.39.4",
     "eslint-config-escapace": "5.15.0",
     "esroll": "1.1.5",
@@ -23,10 +23,10 @@
     "lefthook": "2.1.4",
     "prettier": "3.8.1",
     "prettier-config-escapace": "1.2.2",
-    "syncpack": "14.2.0",
+    "syncpack": "14.2.1",
     "tsx": "4.21.0",
     "typescript": "5.9.3",
-    "vitest": "4.1.0"
+    "vitest": "4.1.1"
   },
   "engines": {
     "node": ">=24.13.0",
