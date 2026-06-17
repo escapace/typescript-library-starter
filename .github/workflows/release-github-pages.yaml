@@ -38,7 +38,7 @@ jobs:
       version: ${{ needs.context.outputs.version }}
 
   release-github-pages:
-    if: needs.context.outputs.github-pages
+    if: fromJSON(needs.context.outputs.github-pages)
     needs:
       - context
       - continuous-integration
