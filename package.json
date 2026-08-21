@@ -13,7 +13,7 @@
     "@escapace/pnpm-pack": "0.9.2",
     "@escapace/syncpack-configuration": "0.3.0",
     "@ls-lint/ls-lint": "2.3.1",
-    "@types/node": "24.13.3",
+    "@types/node": "24.13.2",
     "@vitest/coverage-v8": "4.1.10",
     "eslint": "10.8.1",
     "eslint-config-escapace": "5.20.1",
@@ -32,7 +32,7 @@
     "packageManager": {
       "name": "pnpm",
       "onFail": "warn",
-      "version": "^11.7.0"
+      "version": "^11.20.0"
     },
     "runtime": {
       "name": "node",
@@ -80,13 +80,13 @@
   "repository": "escapace/typescript-library-starter",
   "scripts": {
     "build": "tsx scripts/build.ts",
-    "format": "syncpack format && eslint --no-warn-ignored --fix && prettier --no-error-on-unmatched-pattern -uw .",
+    "format": "syncpack format && eslint --no-warn-ignored --fix && prettier --log-level warn --no-error-on-unmatched-pattern -uw .",
     "lint": "ls-lint --config .ls-lint.yaml && knip --no-config-hints && eslint",
     "ls-lint": "ls-lint --config .ls-lint.yaml",
     "pack": "pnpm-pack package --pack-destination lib",
     "prepare": "lefthook install",
     "syncpack": "syncpack fix && syncpack format",
-    "test": "vitest --no-watch --coverage",
+    "test": "vitest --no-watch --coverage --coverage.reporter=text-summary",
     "typecheck": "tsc --noEmit",
     "update": "ncu --cooldown 7 -p pnpm -u --peer --dep dev,peer,prod,optional && pnpm run syncpack"
   },

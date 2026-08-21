@@ -2,11 +2,11 @@ import { execFile } from 'node:child_process'
 import { constants } from 'node:fs'
 import { access } from 'node:fs/promises'
 import { promisify } from 'node:util'
-import { version, devDependencies } from './package.json'
+import { version, devDependencies } from './package.json' with { type: 'json' }
 import { defineConfig, mergeConfig } from 'vitest/config'
 import type { BrowserProviderOption } from 'vitest/node'
-import { builds } from './scripts/constants.json'
-import configShared from './vitest.config'
+import { builds } from './scripts/constants.json' with { type: 'json' }
+import configShared from './vitest.config.ts'
 
 interface PlaywrightPackage {
   chromium: {

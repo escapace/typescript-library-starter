@@ -4,6 +4,7 @@ allowBuilds:
 blockExoticSubdeps: true
 childConcurrency: 1
 dedupePeers: true
+loglevel: warn
 minimumReleaseAge: 10080
 minimumReleaseAgeExclude:
   - '@caslon/*'
@@ -34,6 +35,7 @@ minimumReleaseAgeExclude:
   - syncpack-windows-arm64
   - syncpack-windows-x64
   - typescript
+minimumReleaseAgeExcludePrune: true
 minimumReleaseAgeStrict: true
 strictDepBuilds: true
 trustPolicy: no-downgrade

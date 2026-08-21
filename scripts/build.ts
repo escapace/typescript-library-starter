@@ -37,7 +37,6 @@ for (const value of Object.values(constants.builds)) {
       ...(value.external ?? []),
     ],
     rollup: {
-      experimentalLogSideEffects: true,
       ...value.rollup,
     },
     supported: {

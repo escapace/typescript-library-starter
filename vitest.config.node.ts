@@ -1,7 +1,7 @@
 import { defineConfig, mergeConfig } from 'vitest/config'
-import { version } from './package.json'
-import { builds } from './scripts/constants.json'
-import configShared from './vitest.config'
+import { version } from './package.json' with { type: 'json' }
+import { builds } from './scripts/constants.json' with { type: 'json' }
+import configShared from './vitest.config.ts'
 
 export default mergeConfig(
   configShared,
